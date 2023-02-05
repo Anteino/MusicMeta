@@ -1,0 +1,2183 @@
+{
+  "tracks": [
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": true,
+      "bpm": 125,
+      "catalog_number": "STASHD050",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2019-04-15T14:01:48-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 11,
+        "name": "Tech House",
+        "slug": "tech-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/11/"
+      },
+      "id": 11874081,
+      "image": {
+        "id": 21683149,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/69a3e1c5-28ba-4a56-8384-41d15441e684.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/69a3e1c5-28ba-4a56-8384-41d15441e684.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "GBKQU1937224",
+      "key": {
+        "camelot_number": 8,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 8,
+        "is_sharp": false,
+        "is_flat": false,
+        "letter": "A",
+        "name": "A Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/8/"
+      },
+      "label_track_identifier": "2862540",
+      "length": "5:23",
+      "length_ms": 323520,
+      "mix_name": "Original Mix",
+      "name": "Ballers",
+      "new_release_date": "2019-04-26",
+      "pre_order": false,
+      "pre_order_date": "2019-04-12",
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2019-04-26",
+      "release": {
+        "id": 2569072,
+        "name": "Ballers",
+        "image": {
+          "id": 21677684,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/b569d625-662d-44a3-b5e7-20ea26d53b93.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/b569d625-662d-44a3-b5e7-20ea26d53b93.jpg"
+        },
+        "label": {
+          "id": 63869,
+          "name": "Stashed",
+          "image": {
+            "id": 24019397,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/6bc6e8b7-4f2b-40e8-a2a8-1f6fecab7449.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/6bc6e8b7-4f2b-40e8-a2a8-1f6fecab7449.jpg"
+          },
+          "slug": "stashed"
+        },
+        "slug": "ballers"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/0d72b2a8-df7f-424d-bf59-3830155a35aa.LOFI.mp3",
+      "sample_start_ms": 129408,
+      "sample_end_ms": 249408,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/11874081/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": true,
+      "bpm": 125,
+      "catalog_number": "NBGS015",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2019-08-09T12:50:39-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 11,
+        "name": "Tech House",
+        "slug": "tech-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/11/"
+      },
+      "id": 12426671,
+      "image": {
+        "id": 22626024,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/96493932-4106-44d8-9875-72636f2ec648.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/96493932-4106-44d8-9875-72636f2ec648.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "GBKQU1937224",
+      "key": {
+        "camelot_number": 8,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 8,
+        "is_sharp": false,
+        "is_flat": false,
+        "letter": "A",
+        "name": "A Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/8/"
+      },
+      "label_track_identifier": "3096123",
+      "length": "5:23",
+      "length_ms": 323520,
+      "mix_name": "Original Mix",
+      "name": "Ballers",
+      "new_release_date": "2019-08-30",
+      "pre_order": false,
+      "pre_order_date": "2019-08-16",
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2019-08-30",
+      "release": {
+        "id": 2685780,
+        "name": "Nothing But... Gym Sessions, Vol. 15",
+        "image": {
+          "id": 22624567,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/3bc6ec26-4977-4887-9b86-20b4033db91a.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/3bc6ec26-4977-4887-9b86-20b4033db91a.jpg"
+        },
+        "label": {
+          "id": 43219,
+          "name": "Nothing But",
+          "image": {
+            "id": 9955213,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/01df98b2-5718-44df-93c6-c13f1b10055c.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/01df98b2-5718-44df-93c6-c13f1b10055c.jpg"
+          },
+          "slug": "nothing-but"
+        },
+        "slug": "nothing-but-gym-sessions-vol-15"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/dadf53e6-5aca-4b30-b63b-c552510b7203.LOFI.mp3",
+      "sample_start_ms": 129408,
+      "sample_end_ms": 249408,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/12426671/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "WP667",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2020-01-29T17:18:51-07:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 39,
+        "name": "Dance / Electro Pop",
+        "slug": "dance-electro-pop",
+        "url": "https://api.beatport.com/v4/catalog/genres/39/"
+      },
+      "id": 13113565,
+      "image": {
+        "id": 24087687,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/f0338eb5-3cbc-4ce9-8a63-d60cccbcd121.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/f0338eb5-3cbc-4ce9-8a63-d60cccbcd121.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEL711910262",
+      "key": {
+        "camelot_number": 2,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 30,
+        "is_sharp": true,
+        "is_flat": false,
+        "letter": "D",
+        "name": "D# Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/30/"
+      },
+      "label_track_identifier": "A10374Z000007Y03WW",
+      "length": "2:26",
+      "length_ms": 146298,
+      "mix_name": "Original Mix",
+      "name": "Ballers",
+      "new_release_date": "2020-02-24",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2020-02-24",
+      "release": {
+        "id": 2843829,
+        "name": "WEPLAY Club Weapons, Vol. 3",
+        "image": {
+          "id": 24085109,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/32296539-3791-4112-9138-54f710956765.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/32296539-3791-4112-9138-54f710956765.jpg"
+        },
+        "label": {
+          "id": 82009,
+          "name": "WEPLAY Music",
+          "image": {
+            "id": 23075335,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/ee4fcdd8-ae72-4d2e-8bce-93af6acc9727.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/ee4fcdd8-ae72-4d2e-8bce-93af6acc9727.jpg"
+          },
+          "slug": "weplay-music"
+        },
+        "slug": "weplay-club-weapons-vol-3"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/ff0330fd-9e5c-41b0-bb5b-4d4d0a5ee349.LOFI.mp3",
+      "sample_start_ms": 26298,
+      "sample_end_ms": 146298,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/13113565/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "190295345754",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2019-09-20T05:04:17-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 39,
+        "name": "Dance / Electro Pop",
+        "slug": "dance-electro-pop",
+        "url": "https://api.beatport.com/v4/catalog/genres/39/"
+      },
+      "id": 12577053,
+      "image": {
+        "id": 22903016,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/9d0458a7-4598-44fa-aa33-ca84dd2d855c.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/9d0458a7-4598-44fa-aa33-ca84dd2d855c.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEL711910261",
+      "key": {
+        "camelot_number": 2,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 30,
+        "is_sharp": true,
+        "is_flat": false,
+        "letter": "D",
+        "name": "D# Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/30/"
+      },
+      "label_track_identifier": "",
+      "length": "3:24",
+      "length_ms": 204414,
+      "mix_name": "Extended Mix",
+      "name": "BALLERS",
+      "new_release_date": "2019-09-20",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2019-09-20",
+      "release": {
+        "id": 2721517,
+        "name": "WEPLAY - BASS EP, VOL. 5",
+        "image": {
+          "id": 22903008,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/f57871f2-423a-463d-b91b-7e03867de133.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/f57871f2-423a-463d-b91b-7e03867de133.jpg"
+        },
+        "label": {
+          "id": 43407,
+          "name": "WePLAY",
+          "image": {
+            "id": 10733333,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/504f218a-9332-405a-8b8f-45641be26ef5.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/504f218a-9332-405a-8b8f-45641be26ef5.jpg"
+          },
+          "slug": "weplay"
+        },
+        "slug": "weplay-bass-ep-vol-5"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/221d6258-89be-4964-a5b0-3d72b5b71244.LOFI.mp3",
+      "sample_start_ms": 81765,
+      "sample_end_ms": 201765,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/12577053/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "CSCOMP2258",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2020-05-14T14:38:10-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 13618101,
+      "image": {
+        "id": 25371529,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/5821742c-1ec2-4591-9741-25f39a156358.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/5821742c-1ec2-4591-9741-25f39a156358.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEW872003022",
+      "key": {
+        "camelot_number": 2,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 30,
+        "is_sharp": true,
+        "is_flat": false,
+        "letter": "D",
+        "name": "D# Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/30/"
+      },
+      "label_track_identifier": "",
+      "length": "3:24",
+      "length_ms": 204414,
+      "mix_name": "Extended Mix",
+      "name": "BALLERS",
+      "new_release_date": "2020-05-21",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2020-05-21",
+      "release": {
+        "id": 2967864,
+        "name": "Club Session pres. Talents Vol. 24",
+        "image": {
+          "id": 25371474,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/0061edb8-bb16-41bd-a6e2-cff4d33ed236.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0061edb8-bb16-41bd-a6e2-cff4d33ed236.jpg"
+        },
+        "label": {
+          "id": 22667,
+          "name": "Club Session",
+          "image": {
+            "id": 7165313,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg"
+          },
+          "slug": "club-session"
+        },
+        "slug": "club-session-pres-talents-vol-24"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/5e25578c-bc00-4dd5-a59f-c9350e16a22a.LOFI.mp3",
+      "sample_start_ms": 81765,
+      "sample_end_ms": 201765,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/13618101/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "RH2COMP1947",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2022-11-03T08:05:25-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 17088324,
+      "image": {
+        "id": 32518136,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/1bb0ea3a-899e-4136-be1e-4ef1d879b3a1.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/1bb0ea3a-899e-4136-be1e-4ef1d879b3a1.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEW872003022",
+      "key": {
+        "camelot_number": 5,
+        "camelot_letter": "B",
+        "chord_type": {
+          "id": 2,
+          "name": "Major",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/2/"
+        },
+        "id": 17,
+        "is_sharp": false,
+        "is_flat": true,
+        "letter": "E",
+        "name": "Eb Major",
+        "url": "https://api.beatport.com/v4/catalog/keys/17/"
+      },
+      "label_track_identifier": null,
+      "length": "3:24",
+      "length_ms": 204414,
+      "mix_name": "Extended Mix",
+      "name": "BALLERS",
+      "new_release_date": "2022-11-08",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2022-11-08",
+      "release": {
+        "id": 3924308,
+        "name": "Bass Tronic Vol. 14",
+        "image": {
+          "id": 32517956,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/d6131a55-f671-49a4-8fb3-05e5d04048ea.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/d6131a55-f671-49a4-8fb3-05e5d04048ea.jpg"
+        },
+        "label": {
+          "id": 15931,
+          "name": "RH2",
+          "image": {
+            "id": 14994403,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/ee065d9f-4151-464e-baab-c554a5627d52.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/ee065d9f-4151-464e-baab-c554a5627d52.jpg"
+          },
+          "slug": "rh2"
+        },
+        "slug": "bass-tronic-vol-14"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/1bb0ea3a-899e-4136-be1e-4ef1d879b3a1.LOFI.mp3",
+      "sample_start_ms": 81766,
+      "sample_end_ms": 201766,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/17088324/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "WP651",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2020-03-19T19:22:39-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 13331000,
+      "image": {
+        "id": 24726765,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/0dac5a69-233b-4ec1-95ec-633dd0ae8286.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dac5a69-233b-4ec1-95ec-633dd0ae8286.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEL711910262",
+      "key": {
+        "camelot_number": 2,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 30,
+        "is_sharp": true,
+        "is_flat": false,
+        "letter": "D",
+        "name": "D# Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/30/"
+      },
+      "label_track_identifier": "A10374Z000008BFC7L",
+      "length": "2:26",
+      "length_ms": 146298,
+      "mix_name": "Original Mix",
+      "name": "Ballers",
+      "new_release_date": "2020-03-20",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2020-03-20",
+      "release": {
+        "id": 2898419,
+        "name": "Weplay - Bass EP, Vol. 5",
+        "image": {
+          "id": 24711804,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/26680694-b520-4799-9e86-fcc9d3f5bf43.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/26680694-b520-4799-9e86-fcc9d3f5bf43.jpg"
+        },
+        "label": {
+          "id": 82009,
+          "name": "WEPLAY Music",
+          "image": {
+            "id": 23075335,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/ee4fcdd8-ae72-4d2e-8bce-93af6acc9727.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/ee4fcdd8-ae72-4d2e-8bce-93af6acc9727.jpg"
+          },
+          "slug": "weplay-music"
+        },
+        "slug": "weplay-bass-ep-vol-5"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/12144340-cb7f-49d8-89dc-10c423815f7c.LOFI.mp3",
+      "sample_start_ms": 26298,
+      "sample_end_ms": 146298,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/13331000/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "RVMCOMP2113F",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2020-07-14T17:04:45-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 13949349,
+      "image": {
+        "id": 26005325,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/e805c6c3-b918-4f43-8862-9a8ace947f51.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/e805c6c3-b918-4f43-8862-9a8ace947f51.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEW872003022",
+      "key": {
+        "camelot_number": 2,
+        "camelot_letter": "A",
+        "chord_type": {
+          "id": 1,
+          "name": "Minor",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/1/"
+        },
+        "id": 30,
+        "is_sharp": true,
+        "is_flat": false,
+        "letter": "D",
+        "name": "D# Minor",
+        "url": "https://api.beatport.com/v4/catalog/keys/30/"
+      },
+      "label_track_identifier": "A10374Z000009BW86B",
+      "length": "3:24",
+      "length_ms": 204414,
+      "mix_name": "Extended Mix",
+      "name": "Ballers",
+      "new_release_date": "2020-07-18",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2020-07-18",
+      "release": {
+        "id": 3055677,
+        "name": "Re:Vibe Essentials - Bass House, Vol. 2",
+        "image": {
+          "id": 26005304,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/bbb53750-4fa1-44b2-a473-a3db53336a7d.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/bbb53750-4fa1-44b2-a473-a3db53336a7d.jpg"
+        },
+        "label": {
+          "id": 38614,
+          "name": "Re:vibe Music",
+          "image": {
+            "id": 8941496,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/3aed9d37-6548-45ef-9f86-bd38097b4fe6.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/3aed9d37-6548-45ef-9f86-bd38097b4fe6.jpg"
+          },
+          "slug": "revibe-music"
+        },
+        "slug": "revibe-essentials-bass-house-vol-2"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/4a4afe6f-bc6e-46df-b592-4daa870409ae.LOFI.mp3",
+      "sample_start_ms": 81765,
+      "sample_end_ms": 201765,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/13949349/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "CSCOMP2622",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2021-05-14T10:37:37-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 15309975,
+      "image": {
+        "id": 28599117,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/76da71a0-6f01-40f1-a359-29403fd811d7.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/76da71a0-6f01-40f1-a359-29403fd811d7.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEW872003022",
+      "key": {
+        "camelot_number": 5,
+        "camelot_letter": "B",
+        "chord_type": {
+          "id": 2,
+          "name": "Major",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/2/"
+        },
+        "id": 17,
+        "is_sharp": false,
+        "is_flat": true,
+        "letter": "E",
+        "name": "Eb Major",
+        "url": "https://api.beatport.com/v4/catalog/keys/17/"
+      },
+      "label_track_identifier": null,
+      "length": "3:24",
+      "length_ms": 204414,
+      "mix_name": "Extended Mix",
+      "name": "BALLERS",
+      "new_release_date": "2021-05-22",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2021-05-22",
+      "release": {
+        "id": 3394528,
+        "name": "Suburban Bass Vol. 20",
+        "image": {
+          "id": 28599009,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/3014dcf3-8ca2-46ef-a60c-8335044051bf.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/3014dcf3-8ca2-46ef-a60c-8335044051bf.jpg"
+        },
+        "label": {
+          "id": 22667,
+          "name": "Club Session",
+          "image": {
+            "id": 7165313,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg"
+          },
+          "slug": "club-session"
+        },
+        "slug": "suburban-bass-vol-20"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/76da71a0-6f01-40f1-a359-29403fd811d7.LOFI.mp3",
+      "sample_start_ms": 81766,
+      "sample_end_ms": 201766,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/15309975/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 436852,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Diage",
+          "slug": "diage",
+          "url": "https://api.beatport.com/v4/catalog/artists/436852/"
+        }
+      ],
+      "publish_status": "published",
+      "available_worldwide": false,
+      "bpm": 128,
+      "catalog_number": "CSCOMP3062",
+      "current_status": {
+        "id": 10,
+        "name": "General Content",
+        "url": "https://api.beatport.com/v4/auxiliary/current-status/10/"
+      },
+      "encoded_date": "2022-10-27T07:04:55-06:00",
+      "exclusive": false,
+      "free_downloads": [],
+      "free_download_start_date": null,
+      "free_download_end_date": null,
+      "genre": {
+        "id": 91,
+        "name": "Bass House",
+        "slug": "bass-house",
+        "url": "https://api.beatport.com/v4/catalog/genres/91/"
+      },
+      "id": 17064467,
+      "image": {
+        "id": 32461233,
+        "uri": "https://geo-media.beatport.com/image_size/1500x250/96a695d0-82de-422c-99d7-4b51c5f6c319.png",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/96a695d0-82de-422c-99d7-4b51c5f6c319.png"
+      },
+      "is_available_for_streaming": true,
+      "isrc": "DEW872002897",
+      "key": {
+        "camelot_number": 5,
+        "camelot_letter": "B",
+        "chord_type": {
+          "id": 2,
+          "name": "Major",
+          "url": "https://api.beatport.com/v4/catalog/chord-types/2/"
+        },
+        "id": 17,
+        "is_sharp": false,
+        "is_flat": true,
+        "letter": "E",
+        "name": "Eb Major",
+        "url": "https://api.beatport.com/v4/catalog/keys/17/"
+      },
+      "label_track_identifier": null,
+      "length": "2:26",
+      "length_ms": 146298,
+      "mix_name": "Original Mix",
+      "name": "BALLERS",
+      "new_release_date": "2022-11-03",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "publish_date": "2022-11-03",
+      "release": {
+        "id": 3916267,
+        "name": "Suburban Bass Vol. 31",
+        "image": {
+          "id": 32461182,
+          "uri": "https://geo-media.beatport.com/image_size/1400x1400/9746d7b2-0b71-46a0-9261-675045877143.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/9746d7b2-0b71-46a0-9261-675045877143.jpg"
+        },
+        "label": {
+          "id": 22667,
+          "name": "Club Session",
+          "image": {
+            "id": 7165313,
+            "uri": "https://geo-media.beatport.com/image_size/500x500/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/cec3e80d-2905-4c99-83a5-d4fd8f8d532d.jpg"
+          },
+          "slug": "club-session"
+        },
+        "slug": "suburban-bass-vol-31"
+      },
+      "remixers": [],
+      "sale_type": {
+        "id": 1,
+        "name": "purchase",
+        "url": "https://api.beatport.com/v4/auxiliary/sale-types/1/"
+      },
+      "sample_url": "https://geo-samples.beatport.com/track/96a695d0-82de-422c-99d7-4b51c5f6c319.LOFI.mp3",
+      "sample_start_ms": 58519,
+      "sample_end_ms": 146298,
+      "slug": "ballers",
+      "sub_genre": null,
+      "url": "https://api.beatport.com/v4/catalog/tracks/17064467/",
+      "is_hype": false
+    }
+  ],
+  "order": ["tracks", "artists", "releases", "charts", "playlists"],
+  "artists": [
+    {
+      "created": "2011-08-23T17:26:17-06:00",
+      "id": 212663,
+      "image": {
+        "id": 30054778,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+      },
+      "name": "DJ S.K.T",
+      "slug": "dj-skt",
+      "updated": "2023-02-03T00:51:44-07:00",
+      "website": "DJ S.K.T",
+      "url": "https://api.beatport.com/v4/catalog/artists/212663/",
+      "dj_association": 28319
+    },
+    {
+      "created": "2014-03-10T16:02:47-06:00",
+      "id": 396189,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "DJ S.k.t.",
+      "slug": "dj-skt",
+      "updated": "2021-04-23T01:02:48-06:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/396189/",
+      "dj_association": null
+    },
+    {
+      "created": "2011-09-27T19:06:41-06:00",
+      "id": 218993,
+      "image": {
+        "id": 5320886,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/e53b6953-5357-4884-b601-a879a87e0d78.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/e53b6953-5357-4884-b601-a879a87e0d78.jpg"
+      },
+      "name": "S.K.T",
+      "slug": "skt",
+      "updated": "2020-02-14T00:38:06-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/218993/",
+      "dj_association": null
+    },
+    {
+      "created": "2021-03-31T21:31:48-06:00",
+      "id": 975771,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "DJ S.K.T Remix",
+      "slug": "dj-skt-remix",
+      "updated": "2021-04-16T00:57:35-06:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/975771/",
+      "dj_association": null
+    },
+    {
+      "created": "2015-03-06T09:36:29-07:00",
+      "id": 469394,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Bass Ballers",
+      "slug": "bass-ballers",
+      "updated": "2015-11-09T00:11:30-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/469394/",
+      "dj_association": null
+    },
+    {
+      "created": "2015-08-07T11:11:59-06:00",
+      "id": 500395,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Young Ballers",
+      "slug": "young-ballers",
+      "updated": "2022-11-21T16:29:49-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/500395/",
+      "dj_association": null
+    },
+    {
+      "created": "2020-03-26T17:33:44-06:00",
+      "id": 856111,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Ballers Diet",
+      "slug": "ballers-diet",
+      "updated": "2020-05-27T00:26:47-06:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/856111/",
+      "dj_association": null
+    },
+    {
+      "created": "2019-09-25T17:10:01-06:00",
+      "id": 810208,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Lofi Ballers",
+      "slug": "lofi-ballers",
+      "updated": "2019-11-08T00:34:57-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/810208/",
+      "dj_association": null
+    },
+    {
+      "created": "2018-12-13T14:57:28-07:00",
+      "id": 737129,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Texas Ballers",
+      "slug": "texas-ballers",
+      "updated": "2022-11-21T16:36:50-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/737129/",
+      "dj_association": null
+    },
+    {
+      "created": null,
+      "id": 148967,
+      "image": {
+        "id": 5539565,
+        "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+      },
+      "name": "Beats For Ballers",
+      "slug": "beats-for-ballers",
+      "updated": "2022-11-18T01:14:58-07:00",
+      "website": null,
+      "url": "https://api.beatport.com/v4/catalog/artists/148967/",
+      "dj_association": null
+    }
+  ],
+  "releases": [
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "bpm_range": { "min": 125, "max": 125 },
+      "catalog_number": "STASHD050",
+      "desc": "It has been a massive 18 months for DJ S.K.T's new label Stashed Music. After launching in 2017, Stashed has consistently delivered great House music, from artists such as Franky Wah, DONT BLINK, Rich Wakley, Bang Tidy, and of course DJ S.K.T.\n\nTo celebrate their landmark 50th release, label boss DJ S.K.T delivers a very special single in the form of 'Ballers'. Already the biggest track in his own club DJ sets, and with the hype it's quickly growing online, Ballers is fast becoming one of the hottest weapons in clubland, with it being dropped more than once at the recent Ultra Music Festival, in Miami.\u00a0\u00a0\u00a0\u00a0\n\nStashed continues to go from strength to strength, with widespread support from leading tastemakers, club DJs across the globe and becoming one the hottest new labels on Beatport.\n\nAlso, after the successful launch of 'Stashed Sessions Podcast', look out for the launch of 'Stashed Sessions' live club events to be announced soon, with some of the world's biggest and best DJs lined up to support, Stashed are definitely a label worth paying close attention to in 2019, and beyond.\n\n#KeepItStashed",
+      "enabled": true,
+      "encoded_date": "2019-04-15T14:01:48-06:00",
+      "exclusive": false,
+      "id": 2569072,
+      "image": {
+        "id": 21677684,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/b569d625-662d-44a3-b5e7-20ea26d53b93.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/b569d625-662d-44a3-b5e7-20ea26d53b93.jpg"
+      },
+      "label": {
+        "id": 63869,
+        "name": "Stashed",
+        "image": {
+          "id": 24019397,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/6bc6e8b7-4f2b-40e8-a2a8-1f6fecab7449.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/6bc6e8b7-4f2b-40e8-a2a8-1f6fecab7449.jpg"
+        },
+        "slug": "stashed"
+      },
+      "name": "Ballers",
+      "new_release_date": "2019-04-26",
+      "override_price": "0.00",
+      "pre_order": false,
+      "pre_order_date": "2019-04-12",
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2019-04-26",
+      "remixers": [],
+      "slug": "ballers",
+      "track_count": 1,
+      "upc": "5054284345475",
+      "updated": "2019-05-10T00:20:59-06:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/2569072/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 991836,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "New Hype",
+          "slug": "new-hype",
+          "url": "https://api.beatport.com/v4/catalog/artists/991836/"
+        }
+      ],
+      "bpm_range": { "min": 125, "max": 125 },
+      "catalog_number": "ARMAS2022R1",
+      "desc": "U.K. tastemaker DJ S.K.T has taken it upon himself to maximize the dance floor potential of New Hype's recent single and has done so to great effect. \nWith discoesque chord stabs and rearranged vocals adding to the infectious groove, this take on 'Love Again' is set to rule dance floors for a long time to come.",
+      "enabled": true,
+      "encoded_date": "2021-10-20T06:08:44-06:00",
+      "exclusive": false,
+      "id": 3550787,
+      "image": {
+        "id": 29745481,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/bb2adf6d-23fe-43cb-81f8-8c21665cb066.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/bb2adf6d-23fe-43cb-81f8-8c21665cb066.jpg"
+      },
+      "label": {
+        "id": 33099,
+        "name": "Armada Music",
+        "image": {
+          "id": 25600237,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/c375f726-e442-49b9-85f8-4b76d33e9c94.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/c375f726-e442-49b9-85f8-4b76d33e9c94.jpg"
+        },
+        "slug": "armada-music"
+      },
+      "name": "Love Again - DJ S.K.T Remix",
+      "new_release_date": "2021-11-05",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2021-11-05",
+      "remixers": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "slug": "love-again-dj-skt-remix",
+      "track_count": 1,
+      "upc": "8718522358678",
+      "updated": "2021-11-05T00:57:02-06:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3550787/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 1024558,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Seamus D",
+          "slug": "seamus-d",
+          "url": "https://api.beatport.com/v4/catalog/artists/1024558/"
+        }
+      ],
+      "bpm_range": { "min": 124, "max": 124 },
+      "catalog_number": "G010004751956E",
+      "desc": null,
+      "enabled": true,
+      "encoded_date": "2022-02-10T12:20:01-07:00",
+      "exclusive": false,
+      "id": 3654029,
+      "image": {
+        "id": 30643072,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/9a671da0-eae7-4edd-b536-2b1e218dd800.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/9a671da0-eae7-4edd-b536-2b1e218dd800.jpg"
+      },
+      "label": {
+        "id": 45181,
+        "name": "Pitched Up",
+        "image": {
+          "id": 5539566,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/cda9862c-cf92-4d13-ac65-7e9277181f51.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/cda9862c-cf92-4d13-ac65-7e9277181f51.jpg"
+        },
+        "slug": "pitched-up"
+      },
+      "name": "Like That (DJ S.K.T Extended Remix)",
+      "new_release_date": "2022-02-18",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2022-02-18",
+      "remixers": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "slug": "like-that-dj-skt-extended-remix",
+      "track_count": 1,
+      "upc": "886449926824",
+      "updated": "2022-02-22T16:21:22-07:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3654029/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 317962,
+          "image": {
+            "id": 21506769,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/911427c7-aeda-4419-9936-2940e1aae8e4.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/911427c7-aeda-4419-9936-2940e1aae8e4.jpg"
+          },
+          "name": "Shift K3Y",
+          "slug": "shift-k3y",
+          "url": "https://api.beatport.com/v4/catalog/artists/317962/"
+        },
+        {
+          "id": 331224,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Karen Harding",
+          "slug": "karen-harding",
+          "url": "https://api.beatport.com/v4/catalog/artists/331224/"
+        }
+      ],
+      "bpm_range": { "min": 125, "max": 125 },
+      "catalog_number": "UL02620",
+      "desc": null,
+      "enabled": true,
+      "encoded_date": "2021-01-22T12:21:00-07:00",
+      "exclusive": false,
+      "id": 3266056,
+      "image": {
+        "id": 27661780,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/ea0bc739-0413-4e4c-babb-379b4aadda7c.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/ea0bc739-0413-4e4c-babb-379b4aadda7c.jpg"
+      },
+      "label": {
+        "id": 907,
+        "name": "Ultra",
+        "image": {
+          "id": 18682005,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/2957b443-c981-43f2-981a-4dc55c4aa8c6.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/2957b443-c981-43f2-981a-4dc55c4aa8c6.jpg"
+        },
+        "slug": "ultra"
+      },
+      "name": "Morning - DJ S.K.T Extended Mix",
+      "new_release_date": "2021-02-12",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2021-02-12",
+      "remixers": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "slug": "morning-dj-skt-extended-mix",
+      "track_count": 1,
+      "upc": "0617465026201",
+      "updated": "2021-02-12T00:43:48-07:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3266056/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 148967,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Beats For Ballers",
+          "slug": "beats-for-ballers",
+          "url": "https://api.beatport.com/v4/catalog/artists/148967/"
+        }
+      ],
+      "bpm_range": { "min": 75, "max": 164 },
+      "catalog_number": "JAKE017I",
+      "desc": "",
+      "enabled": true,
+      "encoded_date": "2010-08-05T16:17:15-06:00",
+      "exclusive": false,
+      "id": 269685,
+      "image": {
+        "id": 759800,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/24c5d142-f956-4b6b-b562-a3f5c6ec3e22.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/24c5d142-f956-4b6b-b562-a3f5c6ec3e22.jpg"
+      },
+      "label": {
+        "id": 11735,
+        "name": "Jake Records",
+        "image": {
+          "id": 303242,
+          "uri": "https://geo-media.beatport.com/image_size/60x60/264d9787-e9c3-4b05-9977-a30bb28c7a2c.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/264d9787-e9c3-4b05-9977-a30bb28c7a2c.jpg"
+        },
+        "slug": "jake-records"
+      },
+      "name": "Beats For Ballers, Volume 4",
+      "new_release_date": "2010-08-24",
+      "override_price": "16.99",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 16.99,
+        "display": "\u20ac16.99"
+      },
+      "price_override_firm": true,
+      "publish_date": "2010-08-24",
+      "remixers": [],
+      "slug": "beats-for-ballers-volume-4",
+      "track_count": 17,
+      "upc": "000000083782",
+      "updated": "2019-11-20T09:20:40-07:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/269685/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 148967,
+          "image": {
+            "id": 5539565,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0dc61986-bccf-49d4-8fad-6b147ea8f327.jpg"
+          },
+          "name": "Beats For Ballers",
+          "slug": "beats-for-ballers",
+          "url": "https://api.beatport.com/v4/catalog/artists/148967/"
+        }
+      ],
+      "bpm_range": { "min": 80, "max": 116 },
+      "catalog_number": "JAKE016C",
+      "desc": "",
+      "enabled": true,
+      "encoded_date": "2010-08-17T17:14:23-06:00",
+      "exclusive": false,
+      "id": 273313,
+      "image": {
+        "id": 771966,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/2e0b8a5f-57b5-4b18-ac00-f9172fa23532.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/2e0b8a5f-57b5-4b18-ac00-f9172fa23532.jpg"
+      },
+      "label": {
+        "id": 11735,
+        "name": "Jake Records",
+        "image": {
+          "id": 303242,
+          "uri": "https://geo-media.beatport.com/image_size/60x60/264d9787-e9c3-4b05-9977-a30bb28c7a2c.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/264d9787-e9c3-4b05-9977-a30bb28c7a2c.jpg"
+        },
+        "slug": "jake-records"
+      },
+      "name": "Beats For Ballers Vol. 3",
+      "new_release_date": "2010-03-02",
+      "override_price": "9.99",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 9.99,
+        "display": "\u20ac9.99"
+      },
+      "price_override_firm": true,
+      "publish_date": "2010-03-02",
+      "remixers": [],
+      "slug": "beats-for-ballers-vol-3",
+      "track_count": 12,
+      "upc": "000000071376",
+      "updated": "2019-11-20T09:20:40-07:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/273313/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "bpm_range": { "min": 125, "max": 125 },
+      "catalog_number": "71581",
+      "desc": null,
+      "enabled": true,
+      "encoded_date": "2022-05-31T18:33:19-06:00",
+      "exclusive": false,
+      "id": 3765355,
+      "image": {
+        "id": 31404010,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/fc638295-67fe-4fff-bad5-aa510f7ad880.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/fc638295-67fe-4fff-bad5-aa510f7ad880.jpg"
+      },
+      "label": {
+        "id": 75521,
+        "name": "THRIVE MUSIC",
+        "image": {
+          "id": 22078824,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/0d8d4a32-0123-479c-ab22-5c2954fdc441.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0d8d4a32-0123-479c-ab22-5c2954fdc441.jpg"
+        },
+        "slug": "thrive-music"
+      },
+      "name": "All Good",
+      "new_release_date": "2022-06-17",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2022-06-17",
+      "remixers": [],
+      "slug": "all-good",
+      "track_count": 1,
+      "upc": "00842812171581",
+      "updated": "2022-06-17T01:00:50-06:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3765355/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "bpm_range": { "min": 123, "max": 123 },
+      "catalog_number": "075679858238",
+      "desc": null,
+      "enabled": true,
+      "encoded_date": "2018-11-16T00:01:26-07:00",
+      "exclusive": false,
+      "id": 2443536,
+      "image": {
+        "id": 20608097,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/364036ce-6928-48f6-94ed-5461df20b788.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/364036ce-6928-48f6-94ed-5461df20b788.jpg"
+      },
+      "label": {
+        "id": 15321,
+        "name": "Big Beat Records",
+        "image": {
+          "id": 9156768,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/455cef7c-9ba8-4f07-85e7-83e94c2820cc.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/455cef7c-9ba8-4f07-85e7-83e94c2820cc.jpg"
+        },
+        "slug": "big-beat-records"
+      },
+      "name": "Lipstick & Perfume",
+      "new_release_date": "2018-11-16",
+      "override_price": "0.00",
+      "pre_order": false,
+      "pre_order_date": null,
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2018-11-16",
+      "remixers": [],
+      "slug": "lipstick-perfume",
+      "track_count": 1,
+      "upc": "075679858238",
+      "updated": "2020-10-21T10:31:38-06:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/2443536/",
+      "is_hype": false
+    },
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "bpm_range": { "min": 124, "max": 124 },
+      "catalog_number": "LJR0047E",
+      "desc": null,
+      "enabled": true,
+      "encoded_date": "2022-04-21T06:53:22-06:00",
+      "exclusive": false,
+      "id": 3726143,
+      "image": {
+        "id": 31139070,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/35ddf929-e9e0-4d95-8ae7-6f02532baf9d.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/35ddf929-e9e0-4d95-8ae7-6f02532baf9d.jpg"
+      },
+      "label": {
+        "id": 64045,
+        "name": "Lovejuice Records",
+        "image": {
+          "id": 21369826,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/ace8356f-2dda-452a-bb98-91829e41b209.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/ace8356f-2dda-452a-bb98-91829e41b209.jpg"
+        },
+        "slug": "lovejuice-records"
+      },
+      "name": "Tell Me",
+      "new_release_date": "2022-05-13",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": "2022-05-03",
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2022-05-13",
+      "remixers": [],
+      "slug": "tell-me",
+      "track_count": 1,
+      "upc": "5056580827075",
+      "updated": "2022-05-27T01:13:47-06:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3726143/",
+      "is_hype": true
+    },
+    {
+      "artists": [
+        {
+          "id": 212663,
+          "image": {
+            "id": 30054778,
+            "uri": "https://geo-media.beatport.com/image_size/590x404/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg",
+            "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/0285be7b-85c2-4bee-be39-3dc74a9b1b0d.jpg"
+          },
+          "name": "DJ S.K.T",
+          "slug": "dj-skt",
+          "url": "https://api.beatport.com/v4/catalog/artists/212663/"
+        }
+      ],
+      "bpm_range": { "min": 124, "max": 124 },
+      "catalog_number": "TOOL109001Z",
+      "desc": "Regarded as one of the hottest talents in the UK club scene, DJ S.K.T is back with more brand- new music for 2021. A formidable force in the Dance Music, Toolroom fans will already be acquainted with DJ S.K.T from his previous releases on the label such as 2019's 'Raindrops' on Toolroom's Ibiza comp and more recently, mixing the latest 'Vaults Vol. 2' album.\n\nThe avid selector, DJ & label head of Stashed Music has certainly made the rounds over the past few years, from dropping the massive 2015 hit 'Take Me Away' feat. Rae to regular radio shows on KISS FM & Rinse FM. Now, DJ S.K.T makes his way back to Toolroom, with quite possibly the hottest release of the year so far with 'Call On Me'.\nA definite \"Hands in the air\" moment record, 'Call On Me' is topped with everything you could possibly want from a Toolroom release and more. \n\nWith a solid production from start to finish, 'Call On Me' is a huge return to form for DJ S.K.T. From the records thumping, rock steady rhythm matched to a get-up and go bassline, along with an underlining ferocious synth hook and a sublime vocal melody to tie it all together, 'Call On Me' has got it all. It's pretty obvious that DJ S.K.T has out done himself on this record, and it is without a doubt that 'Call On Me' will be THE record you will have on repeat going into 2022!",
+      "enabled": true,
+      "encoded_date": "2021-10-28T11:02:29-06:00",
+      "exclusive": false,
+      "id": 3558659,
+      "image": {
+        "id": 30120626,
+        "uri": "https://geo-media.beatport.com/image_size/1400x1400/fa73255d-b63b-4064-8af5-c2960efae0ca.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/fa73255d-b63b-4064-8af5-c2960efae0ca.jpg"
+      },
+      "label": {
+        "id": 495,
+        "name": "Toolroom",
+        "image": {
+          "id": 11530700,
+          "uri": "https://geo-media.beatport.com/image_size/500x500/41217a0b-92e4-4fbd-9223-d513c62dd411.jpg",
+          "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/41217a0b-92e4-4fbd-9223-d513c62dd411.jpg"
+        },
+        "slug": "toolroom"
+      },
+      "name": "Call On Me",
+      "new_release_date": "2021-11-19",
+      "override_price": null,
+      "pre_order": false,
+      "pre_order_date": "2021-11-05",
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 1.29,
+        "display": "\u20ac1.29"
+      },
+      "price_override_firm": false,
+      "publish_date": "2021-11-19",
+      "remixers": [],
+      "slug": "call-on-me",
+      "track_count": 1,
+      "upc": "5052075025933",
+      "updated": "2021-12-11T07:46:42-07:00",
+      "url": "https://api.beatport.com/v4/catalog/releases/3558659/",
+      "is_hype": false
+    }
+  ],
+  "charts": [
+    {
+      "add_date": "2015-03-25T07:40:44-06:00",
+      "change_date": "2015-03-25T08:02:14-06:00",
+      "id": 342420,
+      "image": {
+        "id": 11293923,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/e2c9745e-61a8-47b3-9542-ab792d9da61a.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/e2c9745e-61a8-47b3-9542-ab792d9da61a.jpg"
+      },
+      "name": "DJ S.K.T WMC Chart",
+      "person": {
+        "id": 28319,
+        "owner_image": "https://geo-media.beatport.com/image_size/500x500/4390b0cf-844f-43a5-b4f6-23729f0cf4fc.jpg",
+        "owner_name": "DJ S.K.T",
+        "owner_slug": "djskt",
+        "owner_type": "djprofile",
+        "owner_person": 1030052
+      },
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 7.74,
+        "display": "\u20ac7.74"
+      },
+      "publish_date": "2015-03-25T08:02:13-06:00",
+      "slug": "dj-skt-wmc-chart",
+      "track_count": 6,
+      "url": "https://api.beatport.com/v4/catalog/charts/342420/",
+      "artist": { "id": 212663, "name": "DJ S.K.T", "slug": "dj-skt" },
+      "genres": [
+        {
+          "id": 11,
+          "name": "Tech House",
+          "slug": "tech-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/11/"
+        },
+        {
+          "id": 12,
+          "name": "Deep House",
+          "slug": "deep-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/12/"
+        },
+        {
+          "id": 5,
+          "name": "House",
+          "slug": "house",
+          "url": "https://api.beatport.com/v4/catalog/genres/5/"
+        }
+      ]
+    },
+    {
+      "add_date": "2016-08-12T09:31:32-06:00",
+      "change_date": "2016-08-12T09:50:17-06:00",
+      "id": 411545,
+      "image": {
+        "id": 14258790,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/94cf21ed-de48-49f6-ade8-3166187cd143.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/94cf21ed-de48-49f6-ade8-3166187cd143.jpg"
+      },
+      "name": "DJ S.K.T - Livewire Chart",
+      "person": {
+        "id": 28319,
+        "owner_image": "https://geo-media.beatport.com/image_size/500x500/4390b0cf-844f-43a5-b4f6-23729f0cf4fc.jpg",
+        "owner_name": "DJ S.K.T",
+        "owner_slug": "djskt",
+        "owner_type": "djprofile",
+        "owner_person": 1030052
+      },
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 12.9,
+        "display": "\u20ac12.90"
+      },
+      "publish_date": "2016-08-12T09:50:16-06:00",
+      "slug": "dj-skt-livewire-chart",
+      "track_count": 10,
+      "url": "https://api.beatport.com/v4/catalog/charts/411545/",
+      "artist": { "id": 212663, "name": "DJ S.K.T", "slug": "dj-skt" },
+      "genres": [
+        {
+          "id": 8,
+          "name": "Hard Dance / Hardcore",
+          "slug": "hard-dance-hardcore",
+          "url": "https://api.beatport.com/v4/catalog/genres/8/"
+        },
+        {
+          "id": 11,
+          "name": "Tech House",
+          "slug": "tech-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/11/"
+        },
+        {
+          "id": 12,
+          "name": "Deep House",
+          "slug": "deep-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/12/"
+        },
+        {
+          "id": 5,
+          "name": "House",
+          "slug": "house",
+          "url": "https://api.beatport.com/v4/catalog/genres/5/"
+        }
+      ]
+    },
+    {
+      "add_date": "2013-03-31T10:58:45-06:00",
+      "change_date": "2013-03-31T11:01:31-06:00",
+      "id": 167595,
+      "image": {
+        "id": 7188770,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/00d4c51a-bcd8-4cc6-aa22-c5851cbb266f.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/00d4c51a-bcd8-4cc6-aa22-c5851cbb266f.jpg"
+      },
+      "name": "DJ S.K.T Essential buys Chart",
+      "person": {
+        "id": 28319,
+        "owner_image": "https://geo-media.beatport.com/image_size/500x500/4390b0cf-844f-43a5-b4f6-23729f0cf4fc.jpg",
+        "owner_name": "DJ S.K.T",
+        "owner_slug": "djskt",
+        "owner_type": "djprofile",
+        "owner_person": 1030052
+      },
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 12.9,
+        "display": "\u20ac12.90"
+      },
+      "publish_date": "2013-03-31T11:01:31-06:00",
+      "slug": "dj-skt-essential-buys-chart",
+      "track_count": 10,
+      "url": "https://api.beatport.com/v4/catalog/charts/167595/",
+      "artist": { "id": 212663, "name": "DJ S.K.T", "slug": "dj-skt" },
+      "genres": [
+        {
+          "id": 8,
+          "name": "Hard Dance / Hardcore",
+          "slug": "hard-dance-hardcore",
+          "url": "https://api.beatport.com/v4/catalog/genres/8/"
+        },
+        {
+          "id": 5,
+          "name": "House",
+          "slug": "house",
+          "url": "https://api.beatport.com/v4/catalog/genres/5/"
+        }
+      ]
+    },
+    {
+      "add_date": "2021-11-05T06:42:28-06:00",
+      "change_date": "2021-11-05T06:52:55-06:00",
+      "id": 699066,
+      "image": {
+        "id": 29856278,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/e0984246-ea46-4e2d-9dd9-5926d4dfd950.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/e0984246-ea46-4e2d-9dd9-5926d4dfd950.jpg"
+      },
+      "name": "DJ S.K.T \"Love Again\" Chart",
+      "person": {
+        "id": 28319,
+        "owner_image": "https://geo-media.beatport.com/image_size/500x500/4390b0cf-844f-43a5-b4f6-23729f0cf4fc.jpg",
+        "owner_name": "DJ S.K.T",
+        "owner_slug": "djskt",
+        "owner_type": "djprofile",
+        "owner_person": 1030052
+      },
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 12.9,
+        "display": "\u20ac12.90"
+      },
+      "publish_date": "2021-11-05T06:52:55-06:00",
+      "slug": "dj-skt-love-again-chart",
+      "track_count": 10,
+      "url": "https://api.beatport.com/v4/catalog/charts/699066/",
+      "artist": { "id": 212663, "name": "DJ S.K.T", "slug": "dj-skt" },
+      "genres": [
+        {
+          "id": 5,
+          "name": "House",
+          "slug": "house",
+          "url": "https://api.beatport.com/v4/catalog/genres/5/"
+        },
+        {
+          "id": 39,
+          "name": "Dance / Electro Pop",
+          "slug": "dance-electro-pop",
+          "url": "https://api.beatport.com/v4/catalog/genres/39/"
+        },
+        {
+          "id": 11,
+          "name": "Tech House",
+          "slug": "tech-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/11/"
+        },
+        {
+          "id": 14,
+          "name": "Minimal / Deep Tech",
+          "slug": "minimal-deep-tech",
+          "url": "https://api.beatport.com/v4/catalog/genres/14/"
+        },
+        {
+          "id": 90,
+          "name": "Melodic House & Techno",
+          "slug": "melodic-house-techno",
+          "url": "https://api.beatport.com/v4/catalog/genres/90/"
+        }
+      ]
+    },
+    {
+      "add_date": "2016-11-01T05:55:10-06:00",
+      "change_date": "2016-11-01T06:26:39-06:00",
+      "id": 422257,
+      "image": {
+        "id": 14748741,
+        "uri": "https://geo-media.beatport.com/image_size/500x500/f2415ea9-8306-4d0a-8ebc-07d84f48baac.jpg",
+        "dynamic_uri": "https://geo-media.beatport.com/image_size/{w}x{h}/f2415ea9-8306-4d0a-8ebc-07d84f48baac.jpg"
+      },
+      "name": "DJ S.K.T - Where You Went EP Chart",
+      "person": {
+        "id": 28319,
+        "owner_image": "https://geo-media.beatport.com/image_size/500x500/4390b0cf-844f-43a5-b4f6-23729f0cf4fc.jpg",
+        "owner_name": "DJ S.K.T",
+        "owner_slug": "djskt",
+        "owner_type": "djprofile",
+        "owner_person": 1030052
+      },
+      "price": {
+        "code": "EUR",
+        "symbol": "\u20ac",
+        "value": 12.9,
+        "display": "\u20ac12.90"
+      },
+      "publish_date": "2016-11-01T06:26:38-06:00",
+      "slug": "dj-skt-where-you-went-ep-chart",
+      "track_count": 10,
+      "url": "https://api.beatport.com/v4/catalog/charts/422257/",
+      "artist": { "id": 212663, "name": "DJ S.K.T", "slug": "dj-skt" },
+      "genres": [
+        {
+          "id": 8,
+          "name": "Hard Dance / Hardcore",
+          "slug": "hard-dance-hardcore",
+          "url": "https://api.beatport.com/v4/catalog/genres/8/"
+        },
+        {
+          "id": 11,
+          "name": "Tech House",
+          "slug": "tech-house",
+          "url": "https://api.beatport.com/v4/catalog/genres/11/"
+        },
+        {
+          "id": 5,
+          "name": "House",
+          "slug": "house",
+          "url": "https://api.beatport.com/v4/catalog/genres/5/"
+        }
+      ]
+    }
+  ],
+  "labels": [],
+  "playlists": [
+    {
+      "id": 431504,
+      "name": "Ballers",
+      "created_date": "2021-08-03T03:14:44-06:00",
+      "updated_date": "2021-08-03T03:15:48-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 601109,
+      "name": "Ballers",
+      "created_date": "2021-11-24T09:10:33-07:00",
+      "updated_date": "2022-11-11T20:13:11-07:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 601160,
+      "name": "Ballers",
+      "created_date": "2021-11-24T09:29:16-07:00",
+      "updated_date": "2022-11-11T20:13:29-07:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 569730,
+      "name": "DJ S.K.T \"Love Again\" Chart",
+      "created_date": "2021-11-05T11:48:40-06:00",
+      "updated_date": "2021-11-05T11:48:41-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 412808,
+      "name": "Ballers Journey",
+      "created_date": "2021-07-21T13:27:12-06:00",
+      "updated_date": "2021-07-23T07:02:08-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 412818,
+      "name": "Ballers Fantazia",
+      "created_date": "2021-07-21T13:36:48-06:00",
+      "updated_date": "2021-07-23T04:34:34-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 1184043,
+      "name": "ballers.3",
+      "created_date": "2022-08-23T18:43:31-06:00",
+      "updated_date": "2022-08-23T18:43:31-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 81824,
+      "name": "Pure Tech House (Mixed by DJ S.K.T)",
+      "created_date": "2020-06-19T07:31:21-06:00",
+      "updated_date": "2021-03-25T15:34:59-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 82348,
+      "name": "Pure Tech House (Mixed by DJ S.K.T)",
+      "created_date": "2020-06-20T03:40:37-06:00",
+      "updated_date": "2021-03-25T15:34:59-06:00",
+      "type": 2,
+      "is_public": false
+    },
+    {
+      "id": 458915,
+      "name": "Pure Tech House (Mixed by DJ S.K.T)",
+      "created_date": "2021-08-22T11:57:07-06:00",
+      "updated_date": "2021-08-22T11:58:09-06:00",
+      "type": 2,
+      "is_public": false
+    }
+  ]
+}
