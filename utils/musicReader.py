@@ -1,5 +1,6 @@
 import os
 import re
+import soundfile as sf
 
 from utils.constants import ALLOWED_EXTENSIONS
 
@@ -10,12 +11,16 @@ class musicPath:
     prepath = ""
     filename = ""
     fullpath = ""
+    duration = ""
 
     def __init__(self, root, filepath):
         self.fullpath = root + '\\' + filepath
         
         self.prepath = re.sub(r'\\[^\\]*$', '', self.fullpath) + '\\'
         self.filename = self.fullpath.replace(self.prepath, '')
+
+        f = sf.SoundFile(self.fullpath)
+        self.duration = f.frames / f.samplerate
 
 def _get_dir_content(path, include_folders, recursive):
     entries = os.listdir(path)
