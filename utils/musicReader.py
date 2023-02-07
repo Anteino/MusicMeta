@@ -1,21 +1,13 @@
 import os
-import re
+import sys
 
+sys.path.append('../MusicMeta')
 from utils.constants import ALLOWED_EXTENSIONS
+from classes.musicdata import MusicData
 
 #   Taken + adapted from the question asked and answered here:
 #       https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
 
-class musicPath:
-    prepath = ""
-    filename = ""
-    fullpath = ""
-
-    def __init__(self, root, filepath):
-        self.fullpath = root + '\\' + filepath
-        
-        self.prepath = re.sub(r'\\[^\\]*$', '', self.fullpath) + '\\'
-        self.filename = self.fullpath.replace(self.prepath, '')
 
 def _get_dir_content(path, include_folders, recursive):
     entries = os.listdir(path)
@@ -62,7 +54,7 @@ def musicReader(path):
     for item in tmp:
         extension = item.split('.')[-1].lower()
         if(extension in ALLOWED_EXTENSIONS):
-            contents.append(musicPath(path, item))
+            contents.append(MusicData(path, item))
     
     return contents
 
