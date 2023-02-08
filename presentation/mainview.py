@@ -4,17 +4,18 @@ import sys
 
 sys.path.append('../MusicMeta')
 from utils.constants import *
-from classes.musicline import MusicLine
+from presentation.components.musicline import MusicLine
 
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
         self.checkAllClicked = checkAllClicked
         self.lineCheckBoxClicked = lineCheckBoxClicked
+        self.beatportComboBoxChanged = beatportComboBoxChanged
         self.initUI()
         self.retranslateUi()
     
@@ -37,7 +38,7 @@ class MainView(QMainWindow):
         self.pathLabel.setObjectName("pathLabel")
         
         self.beatportButton = QtWidgets.QPushButton(self)
-        self.beatportButton.setGeometry(QtCore.QRect(760, 10, 201, 31))
+        self.beatportButton.setGeometry(QtCore.QRect(760, 10, 151, 31))
         self.beatportButton.setCheckable(False)
         self.beatportButton.setObjectName("beatportButton")
         self.beatportButton.clicked.connect(self.beatportButtonClicked)
@@ -127,7 +128,7 @@ class MainView(QMainWindow):
         self.musicLines = []
         
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setFixedWidth(1501)
+        self.scrollAreaWidgetContents.setFixedWidth(1701)
         self.scrollAreaWidgetContents.setMinimumHeight(max(len(data) * 40 + 10, 459))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
 
@@ -136,5 +137,29 @@ class MainView(QMainWindow):
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
     
+    def updateMusicLine(self, index, data):
+        self.musicLines[index].newFilenameLineEdit.setText(data.newFilename)
+        self.musicLines[index].titleLineEdit.setText(data.title)
+        self.musicLines[index].artistLineEdit.setText(data.artist)
+        self.musicLines[index].albumLineEdit.setText(data.album)
+        self.musicLines[index].yearLineEdit.setText(data.year)
+        self.musicLines[index].genreLineEdit.setText(data.genre)
+        self.musicLines[index].publisherLineEdit.setText(data.publisher)
+        self.musicLines[index].keyLineEdit.setText(data.key)
+        self.musicLines[index].bpmLineEdit.setText(data.bpm)
+    
+    def updateBeatportData(self, musicData):
+        for i in range(len(musicData)):
+            data = musicData[i].beatportData
+            if(len(data["tracks"]) != 0):
+                self.musicLines[i].beatportComboBox.clear()
+                for track in data["tracks"]:
+                    line = track["name"] +  " (" + track["mix_name"] + ") - " + track["artists"][0]["name"]
+                    for j in range(1, len(track["artists"])):
+                        artist = track["artists"][j]
+                        line += ", " + artist["name"]
+                    line += " (publ: " + track["release"]["label"]["name"] + ")"
+                    self.musicLines[i].beatportComboBox.addItem(line)
+    
     def addMusicDataFrame(self, data):
-        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked))
+        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged))

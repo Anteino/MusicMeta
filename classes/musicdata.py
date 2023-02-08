@@ -2,7 +2,7 @@ import re
 import mutagen
 
 class MusicData:
-    beatportData = []
+    beatportData = {}
     
     def __init__(self, root, filepath):
         self.fullpath = root + '\\' + filepath
