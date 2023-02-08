@@ -18,7 +18,7 @@ class MainViewController():
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -107,3 +107,24 @@ class MainViewController():
         self.mainView.updateMusicLine(musicIndex, self.musicData[musicIndex])
         self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
         self.lineCheckBoxClicked(musicIndex)
+    
+    def saveButtonClicked(self):
+        for index in range(len(self.mainView.musicLines)):
+            musicLine = self.mainView.musicLines[index]
+
+            if(musicLine.checkBox.isChecked()):
+                tmp = musicLine.newFilenameLineEdit.text()
+                ext = self.musicData[index].extension
+                if(tmp.find(ext) == -1):
+                    tmp = tmp + "." + ext
+                self.musicData[index].newFilename = tmp
+                self.musicData[index].title = musicLine.titleLineEdit.text()
+                self.musicData[index].artist = musicLine.artistLineEdit.text()
+                self.musicData[index].album = musicLine.albumLineEdit.text()
+                self.musicData[index].year = musicLine.yearLineEdit.text()
+                self.musicData[index].genre = musicLine.genreLineEdit.text()
+                self.musicData[index].publisher = musicLine.publisherLineEdit.text()
+                self.musicData[index].key = musicLine.keyLineEdit.text()
+                self.musicData[index].bpm = musicLine.bpmLineEdit.text()
+
+                self.musicData[index].saveTags()
