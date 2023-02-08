@@ -22,8 +22,9 @@ class MainViewController():
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
         self.mainView.setPathLabel(self.root)
-        self.musicData = reader(self.root)
-        self.mainView.repopulateMusicData(self.musicData)
+        if(self.root != ""):
+            self.musicData = reader(self.root)
+            self.mainView.repopulateMusicData(self.musicData)
 
         self.mainView.show()
         sys.exit(self.app.exec_())
