@@ -1,4 +1,4 @@
-# MusicMeta
+# MusicMeta by Anteino
 
 When you're collecting music from different sources like SoundCloud, Beatport, DJ Pools, etc, it can be a pain to manually set all the track info.
 
