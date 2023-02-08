@@ -1,5 +1,6 @@
 import re
 import mutagen
+from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, COMM
 
 class MusicData:
     beatportData = {}
@@ -27,7 +28,7 @@ class MusicData:
         if((self.title != "") & (self.artist != "")):
             self.newFilename = self.title + " - " + self.artist + "." + self.extension
         else:
-            self.newFilename = ""
+            self.newFilename = self.filename
     
     def extractKey(self, file, key):
         if(key in file):
@@ -37,3 +38,23 @@ class MusicData:
                 return file.tags[key].text
         else:
             return [""]
+    
+    def saveTags(self):
+        try:
+            tags = ID3(self.fullpath)
+        except ID3NoHeaderError:
+            print("Adding ID3 header")
+            tags = ID3()
+        
+        tags["TIT2"] = TIT2(encoding=3, text=self.title)
+        tags["TPE1"] = TPE1(encoding=3, text=self.artist)
+        tags["TALB"] = TALB(encoding=3, text=self.album)
+        tags["TDRC"] = TDRC(encoding=3, text=self.year)
+        tags["TCON"] = TCON(encoding=3, text=self.genre)
+        tags["TPUB"] = TPUB(encoding=3, text=self.publisher)
+        tags["TKEY"] = TKEY(encoding=3, text=self.key)
+        tags["TBPM"] = TBPM(encoding=3, text=self.bpm)
+
+        tags["COMM"] = COMM(encoding=3, lang=u'eng', desc='desc', text=u'MusicMeta by Anteino was used to edit meta data of this song.')
+
+        tags.save(self.fullpath)

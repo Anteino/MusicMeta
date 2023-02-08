@@ -127,4 +127,4 @@ class MainViewController():
                 self.musicData[index].key = musicLine.keyLineEdit.text()
                 self.musicData[index].bpm = musicLine.bpmLineEdit.text()
 
-                print(self.musicData[index].newFilename)
+                self.musicData[index].saveTags()
