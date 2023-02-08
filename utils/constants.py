@@ -8,6 +8,7 @@ WINDOW_SIZE = [1731, 541]
 WINDOW_TITLE = "MusicMeta: automatically collect track info."
 OPEN_FOLDER = "Open folder"
 IMPORT_BEATPORT = "Import from beatport"
+SAVE = "Save tags for selected songs"
 
 CURRENT_FILENAME = "Current filename"
 NEW_FILENAME = "New filename"

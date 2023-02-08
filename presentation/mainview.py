@@ -9,13 +9,14 @@ from presentation.components.musicline import MusicLine
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
         self.checkAllClicked = checkAllClicked
         self.lineCheckBoxClicked = lineCheckBoxClicked
         self.beatportComboBoxChanged = beatportComboBoxChanged
+        self.saveButtonClicked = saveButtonClicked
         self.initUI()
         self.retranslateUi()
     
@@ -42,6 +43,12 @@ class MainView(QMainWindow):
         self.beatportButton.setCheckable(False)
         self.beatportButton.setObjectName("beatportButton")
         self.beatportButton.clicked.connect(self.beatportButtonClicked)
+        
+        self.saveButton = QtWidgets.QPushButton(self)
+        self.saveButton.setGeometry(QtCore.QRect(931, 10, 201, 31))
+        self.saveButton.setCheckable(False)
+        self.saveButton.setObjectName("saveButton")
+        self.saveButton.clicked.connect(self.saveButtonClicked)
 
         self.line = QtWidgets.QFrame(self)
         self.line.setGeometry(QtCore.QRect(0, 50, WINDOW_SIZE[0], 16))
@@ -109,6 +116,7 @@ class MainView(QMainWindow):
         self.setWindowTitle(WINDOW_TITLE)
         self.openFolderButton.setText(_translate("MainWindow", OPEN_FOLDER))
         self.beatportButton.setText(_translate("MainWindow", IMPORT_BEATPORT))
+        self.saveButton.setText(_translate("MainWindow", SAVE))
         self.currentFilenameLabelHeader.setText(_translate("MainWindow", CURRENT_FILENAME))
         self.newFilenameLabelHeader.setText(_translate("MainWindow", NEW_FILENAME))
         self.titleLabel.setText(_translate("MainWindow", TITLE))
