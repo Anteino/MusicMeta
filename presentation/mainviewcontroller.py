@@ -1,15 +1,18 @@
+import asyncio
+import aiohttp
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication
 import sys
 
-sys.path.append('../MusicMeta/utils')
-from constants import *
-from musicReader import musicReader as reader
+sys.path.append('../MusicMeta')
+from utils.constants import *
+from utils.musicReader import musicReader as reader
+from model.beatportSearch import beatportSearch as search
 
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = ""
+    root = "C:\\Users\\admin\\Music\\SoundCloud\\Flauwe shit"
     musicData = []
 
     def __init__(self):
@@ -17,6 +20,11 @@ class MainViewController():
         self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked)
     
     def show(self):
+        self.mainView.selectAllCheckBox.setChecked(False)
+        self.mainView.setPathLabel(self.root)
+        self.musicData = reader(self.root)
+        self.mainView.repopulateMusicData(self.musicData)
+
         self.mainView.show()
         sys.exit(self.app.exec_())
     
@@ -30,7 +38,6 @@ class MainViewController():
         self.mainView.repopulateMusicData(self.musicData)
     
     def beatportButtonClicked(self):
-        self.mainView.musicLines[0].currentFilenameLabel.setText("dien mam")
         pass
 
     def checkAllClicked(self, state):

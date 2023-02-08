@@ -2,11 +2,14 @@ import re
 import mutagen
 
 class MusicData:
+    beatportData = []
+    
     def __init__(self, root, filepath):
         self.fullpath = root + '\\' + filepath
         
         self.prepath = re.sub(r'\\[^\\]*$', '', self.fullpath) + '\\'
         self.filename = self.fullpath.replace(self.prepath, '')
+        self.name = re.sub(r'\.[^\.]*$', '', self.filename)
 
         file = mutagen.File(self.fullpath)
         self.duration = file.info.length
