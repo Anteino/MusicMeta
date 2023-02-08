@@ -1,23 +1,23 @@
 import requests
 import json
+import sys
+import asyncio
+import aiohttp
+
+sys.path.append('../MusicMeta')
 
 from utils.constants import *
 
-def beatportSearch(query):
-    formattedQuery = query.replace(" ", "+")
-    response = requests.get(BEATPORT_API_URL + formattedQuery)
+async def beatportSearch(query, index, setBeatportData):
+    async with aiohttp.ClientSession() as session:
+        request_url = f'https://www.beatport.com/api/v4/catalog/search?q=' + query
+        async with session.get(request_url) as response:
+            resp = await response.json()
+            setBeatportData(index, resp)
 
-    # print(response.text)
-    
-    resp = json.loads(response.text)
 
-    for track in resp["tracks"]:
-        trackName = track["name"] + " " + track["mix_name"] + " - "
-
-        addComma = 0
-        for artist in track["artists"]:
-            trackName += ("" if addComma == 0 else ", ") + artist["name"]
-            addComma = 1
-        
-        print(trackName)
-        
+async def tmp(item):
+    async with aiohttp.ClientSession() as session:
+        request_url = f'https://www.beatport.com/api/v4/catalog/search?q=' + item
+        async with session.get(request_url) as response:
+            resp = await response.json()

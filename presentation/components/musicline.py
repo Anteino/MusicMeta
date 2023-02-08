@@ -1,12 +1,13 @@
 from PyQt5 import QtCore, QtWidgets
 
 class MusicLine:
-    def __init__(self, super, data, index, lineCheckBoxClicked):
+    def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged):
         self.index = index
         self.lineCheckBoxClicked = lineCheckBoxClicked
+        self.beatportComboBoxChanged = beatportComboBoxChanged
 
         self.frame = QtWidgets.QFrame(super.scrollAreaWidgetContents)
-        self.frame.setGeometry(QtCore.QRect(0, self.index  * 40 + 10, 1501, 21))
+        self.frame.setGeometry(QtCore.QRect(0, self.index  * 40 + 10, 1701, 21))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -16,7 +17,7 @@ class MusicLine:
         
         self.currentFilenameLabel = self.addWidget(QtWidgets.QLabel(self.frame), [40, 0, 201, 20], data.filename, "currentFilenameLabel")
         self.newFilenameLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [250, 0, 151, 20], data.newFilename, "newFilenameLineEdit")
-        self.titleLineEidt = self.addWidget(QtWidgets.QLineEdit(self.frame), [420, 0, 151, 20], data.title, "titleLineEdit")
+        self.titleLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [420, 0, 151, 20], data.title, "titleLineEdit")
         self.artistLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [590, 0, 151, 20], data.artist, "artistLineEdit")
         self.albumLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [760, 0, 101, 20], data.album, "albumLineEdit")
         self.yearLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [880, 0, 51, 20], data.year, "yearLineEdit")
@@ -25,10 +26,14 @@ class MusicLine:
         self.keyLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [1190, 0, 31, 20], data.key, "keyLineEdit")
         self.bpmLineEdit = self.addWidget(QtWidgets.QLineEdit(self.frame), [1240, 0, 31, 20], data.bpm, "bpmLineEdit")
 
-        beatportComboBox = QtWidgets.QComboBox(self.frame)
-        beatportComboBox.setGeometry(QtCore.QRect(1290, 0, 201, 20))
-        beatportComboBox.setCurrentText("")
-        beatportComboBox.setObjectName("beatportComboBox")
+        self.beatportComboBox = QtWidgets.QComboBox(self.frame)
+        self.beatportComboBox.setGeometry(QtCore.QRect(1290, 0, 401, 20))
+        self.beatportComboBox.setCurrentText("")
+        self.beatportComboBox.setObjectName("beatportComboBox")
+        self.beatportComboBox.activated[int].connect(self.onComboBoxChanged)
+    
+    def onComboBoxChanged(self, comboBoxIndex):
+        self.beatportComboBoxChanged(self.index, comboBoxIndex)
     
     def addWidget(self, widgetType, geometry, text, name):
         widget = widgetType

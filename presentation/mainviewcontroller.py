@@ -1,22 +1,31 @@
+import asyncio
+import aiohttp
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication
 import sys
 
-sys.path.append('../MusicMeta/utils')
-from constants import *
-from musicReader import musicReader as reader
+sys.path.append('../MusicMeta')
+from utils.constants import *
+from utils.musicReader import musicReader as reader
+from model.beatportSearch import beatportSearch as search
 
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = ""
+    # root = "C:\\Users\\admin\\Music\\SoundCloud\\Groovy_Funky house"
+    root = "C:\\Users\\admin\\Music\\SoundCloud\\Deep"
     musicData = []
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged)
     
     def show(self):
+        self.mainView.selectAllCheckBox.setChecked(False)
+        self.mainView.setPathLabel(self.root)
+        self.musicData = reader(self.root)
+        self.mainView.repopulateMusicData(self.musicData)
+
         self.mainView.show()
         sys.exit(self.app.exec_())
     
@@ -30,8 +39,28 @@ class MainViewController():
         self.mainView.repopulateMusicData(self.musicData)
     
     def beatportButtonClicked(self):
-        self.mainView.musicLines[0].currentFilenameLabel.setText("dien mam")
-        pass
+        try:
+            self.loop = asyncio.get_event_loop()
+            self.loop.run_until_complete(self.collectBeatportData())
+        except:
+            pass
+    
+    async def collectBeatportData(self):
+        tasks = []
+
+        for index in range(len(self.musicData)):
+            item = self.musicData[index]
+            tasks.append(self.loop.create_task(search(item.name, index, self.setBeatportData)))
+        
+        await asyncio.wait(tasks)
+
+        self.updateBeatportDataToView()
+    
+    def setBeatportData(self, index, data):
+        self.musicData[index].beatportData = data
+    
+    def updateBeatportDataToView(self):
+        self.mainView.updateBeatportData(self.musicData)
 
     def checkAllClicked(self, state):
         for item in self.mainView.musicLines:
@@ -45,3 +74,36 @@ class MainViewController():
             for i in range(len(self.mainView.musicLines)):
                 if(self.mainView.musicLines[i].checkBox.isChecked() != tmp): return
             self.mainView.selectAllCheckBox.setChecked(tmp)
+    
+    def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
+        track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]
+
+        title = track["name"] +  " (" + track["mix_name"] + ")"
+
+        artists = track["artists"][0]["name"]
+        for j in range(1, len(track["artists"])):
+            artist = track["artists"][j]
+            artists += "/" + artist["name"]
+
+        newFilename = title + " - "  + artists
+        ext = self.musicData[musicIndex].extension
+        album = track["release"]["name"]
+        year = track["new_release_date"].split("-")[0]
+        genre = track["genre"]["name"]
+        publisher = track["release"]["label"]["name"]
+        key = str(track["key"]["camelot_number"]) + track["key"]["camelot_letter"]
+        bpm = str(track["bpm"])
+
+        self.musicData[musicIndex].newFilename = newFilename + "." + ext
+        self.musicData[musicIndex].title = title
+        self.musicData[musicIndex].artist = artists
+        self.musicData[musicIndex].album = album
+        self.musicData[musicIndex].year = year
+        self.musicData[musicIndex].genre = genre
+        self.musicData[musicIndex].publisher = publisher
+        self.musicData[musicIndex].key = key
+        self.musicData[musicIndex].bpm = bpm
+
+        self.mainView.updateMusicLine(musicIndex, self.musicData[musicIndex])
+        self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
+        self.lineCheckBoxClicked(musicIndex)
