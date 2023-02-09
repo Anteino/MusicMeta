@@ -147,7 +147,6 @@ class MainView(QMainWindow):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
     
     def updateMusicLine(self, index, data):
-        self.musicLines[index].newFilenameLineEdit.setText(data.newFilename)
         self.musicLines[index].titleLineEdit.setText(data.title)
         self.musicLines[index].artistLineEdit.setText(data.artist)
         self.musicLines[index].albumLineEdit.setText(data.album)

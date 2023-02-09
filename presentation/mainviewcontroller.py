@@ -98,8 +98,6 @@ class MainViewController():
             artist = track["artists"][j]
             artists += "/" + artist["name"]
 
-        newFilename = title + " - "  + artists
-        ext = self.musicData[musicIndex].extension
         album = track["release"]["name"]
         year = track["new_release_date"].split("-")[0]
         genre = track["genre"]["name"]
@@ -107,17 +105,17 @@ class MainViewController():
         key = str(track["key"]["camelot_number"]) + track["key"]["camelot_letter"]
         bpm = str(track["bpm"])
 
-        self.musicData[musicIndex].newFilename = newFilename + "." + ext
-        self.musicData[musicIndex].title = title
-        self.musicData[musicIndex].artist = artists
-        self.musicData[musicIndex].album = album
-        self.musicData[musicIndex].year = year
-        self.musicData[musicIndex].genre = genre
-        self.musicData[musicIndex].publisher = publisher
-        self.musicData[musicIndex].key = key
-        self.musicData[musicIndex].bpm = bpm
+        musicLine = self.mainView.musicLines[musicIndex]
 
-        self.mainView.updateMusicLine(musicIndex, self.musicData[musicIndex])
+        musicLine.titleLineEdit.setText(title)
+        musicLine.artistLineEdit.setText(artists)
+        musicLine.albumLineEdit.setText(album)
+        musicLine.yearLineEdit.setText(year)
+        musicLine.genreLineEdit.setText(genre)
+        musicLine.publisherLineEdit.setText(publisher)
+        musicLine.keyLineEdit.setText(key)
+        musicLine.bpmLineEdit.setText(bpm)
+
         self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
         self.lineCheckBoxClicked(musicIndex)
     
@@ -126,11 +124,6 @@ class MainViewController():
             musicLine = self.mainView.musicLines[index]
 
             if(musicLine.checkBox.isChecked()):
-                tmp = musicLine.newFilenameLineEdit.text()
-                ext = self.musicData[index].extension
-                if(tmp.find(ext) == -1):
-                    tmp = tmp + "." + ext
-                self.musicData[index].newFilename = tmp
                 self.musicData[index].title = musicLine.titleLineEdit.text()
                 self.musicData[index].artist = musicLine.artistLineEdit.text()
                 self.musicData[index].album = musicLine.albumLineEdit.text()

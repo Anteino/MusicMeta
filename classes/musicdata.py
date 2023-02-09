@@ -17,7 +17,7 @@ class MusicData:
         self.extension = self.filename.split('.')[-1].lower()
         
         self.title = self.extractKey(file, 'TIT2')[0]
-        self.artist = self.extractKey(file, 'TPE1')[0]
+        self.artist = re.sub(r'\s*,\s*', '/', self.extractKey(file, 'TPE1')[0])
         self.album = self.extractKey(file, 'TALB')[0]
         self.year = self.extractKey(file, 'TDRC')[0]
         self.genre = self.extractKey(file, 'TCON')[0]
