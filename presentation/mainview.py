@@ -9,7 +9,7 @@ from presentation.components.musicline import MusicLine
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
@@ -17,6 +17,7 @@ class MainView(QMainWindow):
         self.lineCheckBoxClicked = lineCheckBoxClicked
         self.beatportComboBoxChanged = beatportComboBoxChanged
         self.saveButtonClicked = saveButtonClicked
+        self.resetTags = resetTags
         self.initUI()
         self.retranslateUi()
     
@@ -65,45 +66,45 @@ class MainView(QMainWindow):
         self.currentFilenameLabelHeader = QtWidgets.QLabel(self)
         self.currentFilenameLabelHeader.setGeometry(QtCore.QRect(40, 60, 201, 16))
         self.currentFilenameLabelHeader.setObjectName("currentFilenameLabelHeader")
-
-        self.newFilenameLabelHeader = QtWidgets.QLabel(self)
-        self.newFilenameLabelHeader.setGeometry(QtCore.QRect(250, 60, 151, 16))
-        self.newFilenameLabelHeader.setObjectName("newFilenameLabelHeader")
+        
+        self.undoLabel = QtWidgets.QLabel(self)
+        self.undoLabel.setGeometry(QtCore.QRect(250, 60, 26, 16))
+        self.undoLabel.setObjectName("undoLabel")
 
         self.titleLabel = QtWidgets.QLabel(self)
-        self.titleLabel.setGeometry(QtCore.QRect(420, 60, 151, 16))
+        self.titleLabel.setGeometry(QtCore.QRect(290, 60, 151, 16))
         self.titleLabel.setObjectName("titleLabel")
 
         self.artistLabel = QtWidgets.QLabel(self)
-        self.artistLabel.setGeometry(QtCore.QRect(590, 60, 151, 16))
+        self.artistLabel.setGeometry(QtCore.QRect(460, 60, 151, 16))
         self.artistLabel.setObjectName("artistLabel")
 
         self.albumLabel = QtWidgets.QLabel(self)
-        self.albumLabel.setGeometry(QtCore.QRect(760, 60, 101, 16))
+        self.albumLabel.setGeometry(QtCore.QRect(630, 60, 101, 16))
         self.albumLabel.setObjectName("albumLabel")
 
         self.yearLabel = QtWidgets.QLabel(self)
-        self.yearLabel.setGeometry(QtCore.QRect(880, 60, 51, 16))
+        self.yearLabel.setGeometry(QtCore.QRect(750, 60, 51, 16))
         self.yearLabel.setObjectName("yearLabel")
 
         self.genreLabel = QtWidgets.QLabel(self)
-        self.genreLabel.setGeometry(QtCore.QRect(950, 60, 101, 16))
+        self.genreLabel.setGeometry(QtCore.QRect(820, 60, 101, 16))
         self.genreLabel.setObjectName("genreLabel")
 
         self.publisherLabel = QtWidgets.QLabel(self)
-        self.publisherLabel.setGeometry(QtCore.QRect(1070, 60, 101, 16))
+        self.publisherLabel.setGeometry(QtCore.QRect(940, 60, 101, 16))
         self.publisherLabel.setObjectName("publisherLabel")
 
         self.keyLabel = QtWidgets.QLabel(self)
-        self.keyLabel.setGeometry(QtCore.QRect(1190, 60, 31, 16))
+        self.keyLabel.setGeometry(QtCore.QRect(1060, 60, 31, 16))
         self.keyLabel.setObjectName("keyLabel")
 
         self.bpmLabel = QtWidgets.QLabel(self)
-        self.bpmLabel.setGeometry(QtCore.QRect(1240, 60, 31, 16))
+        self.bpmLabel.setGeometry(QtCore.QRect(1110, 60, 31, 16))
         self.bpmLabel.setObjectName("bpmLabel")
 
         self.beatportLabel = QtWidgets.QLabel(self)
-        self.beatportLabel.setGeometry(QtCore.QRect(1290, 60, 201, 16))
+        self.beatportLabel.setGeometry(QtCore.QRect(1160, 60, 531, 16))
         self.beatportLabel.setObjectName("beatportLabel")
         
         self.scrollArea = QtWidgets.QScrollArea(self)
@@ -118,7 +119,7 @@ class MainView(QMainWindow):
         self.beatportButton.setText(_translate("MainWindow", IMPORT_BEATPORT))
         self.saveButton.setText(_translate("MainWindow", SAVE))
         self.currentFilenameLabelHeader.setText(_translate("MainWindow", CURRENT_FILENAME))
-        self.newFilenameLabelHeader.setText(_translate("MainWindow", NEW_FILENAME))
+        self.undoLabel.setText(_translate("MainWindow", UNDO))
         self.titleLabel.setText(_translate("MainWindow", TITLE))
         self.artistLabel.setText(_translate("MainWindow", ARTIST))
         self.albumLabel.setText(_translate("MainWindow", ALBUM))
@@ -170,4 +171,4 @@ class MainView(QMainWindow):
                     self.musicLines[i].beatportComboBox.addItem(line)
     
     def addMusicDataFrame(self, data):
-        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged))
+        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.resetTags))

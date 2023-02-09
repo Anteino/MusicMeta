@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication
 import sys
 
@@ -12,12 +12,12 @@ from model.beatportSearch import beatportSearch as search
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = ""
+    root = "C:\\Users\\admin\\Music\\SoundCloud"
     musicData = []
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -74,6 +74,19 @@ class MainViewController():
             for i in range(len(self.mainView.musicLines)):
                 if(self.mainView.musicLines[i].checkBox.isChecked() != tmp): return
             self.mainView.selectAllCheckBox.setChecked(tmp)
+    
+    def resetTags(self, index):
+        musicLine = self.mainView.musicLines[index]
+        musicData = self.musicData[index]
+
+        musicLine.titleLineEdit.setText(musicData.title)
+        musicLine.artistLineEdit.setText(musicData.artist)
+        musicLine.albumLineEdit.setText(musicData.album)
+        musicLine.yearLineEdit.setText(musicData.year)
+        musicLine.genreLineEdit.setText(musicData.genre)
+        musicLine.publisherLineEdit.setText(musicData.publisher)
+        musicLine.keyLineEdit.setText(musicData.key)
+        musicLine.bpmLineEdit.setText(musicData.bpm)
     
     def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
         track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]

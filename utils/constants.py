@@ -11,7 +11,7 @@ IMPORT_BEATPORT = "Import from beatport"
 SAVE = "Save tags for selected songs"
 
 CURRENT_FILENAME = "Current filename"
-NEW_FILENAME = "New filename"
+UNDO = "Undo"
 TITLE = "Title"
 ARTIST = "Artist(s)"
 ALBUM = "Album"

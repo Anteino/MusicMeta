@@ -24,11 +24,6 @@ class MusicData:
         self.publisher = self.extractKey(file, 'TPUB')[0]
         self.key = self.extractKey(file, 'TKEY')[0]
         self.bpm = self.extractKey(file, 'TBPM')[0]
-
-        if((self.title != "") & (self.artist != "")):
-            self.newFilename = self.title + " - " + self.artist + "." + self.extension
-        else:
-            self.newFilename = self.filename
     
     def extractKey(self, file, key):
         if(key in file):

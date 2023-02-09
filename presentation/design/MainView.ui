@@ -136,107 +136,30 @@
         <string>filename.mp3</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="yearLineEdit">
+      <widget class="QCommandLinkButton" name="commandLinkButton">
        <property name="geometry">
         <rect>
-         <x>880</x>
-         <y>0</y>
-         <width>51</width>
-         <height>20</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="keyLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>1190</x>
-         <y>0</y>
+         <x>110</x>
+         <y>-10</y>
          <width>31</width>
-         <height>20</height>
+         <height>31</height>
         </rect>
        </property>
-      </widget>
-      <widget class="QLineEdit" name="newFilenameLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>0</y>
-         <width>151</width>
-         <height>20</height>
-        </rect>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
        </property>
-      </widget>
-      <widget class="QComboBox" name="beatportComboBox">
-       <property name="geometry">
-        <rect>
-         <x>1290</x>
-         <y>0</y>
-         <width>201</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="currentText">
+       <property name="text">
         <string/>
        </property>
-      </widget>
-      <widget class="QLineEdit" name="artistLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>590</x>
-         <y>0</y>
-         <width>151</width>
-         <height>20</height>
-        </rect>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../assets/icons/undo.png</normaloff>../../assets/icons/undo.png</iconset>
        </property>
-      </widget>
-      <widget class="QLineEdit" name="bpmLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>1240</x>
-         <y>0</y>
-         <width>31</width>
+       <property name="iconSize">
+        <size>
+         <width>18</width>
          <height>20</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="titleLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>420</x>
-         <y>0</y>
-         <width>151</width>
-         <height>20</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="publisherLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>1070</x>
-         <y>0</y>
-         <width>101</width>
-         <height>20</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="genreLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>950</x>
-         <y>0</y>
-         <width>101</width>
-         <height>20</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="albumLineEdit">
-       <property name="geometry">
-        <rect>
-         <x>760</x>
-         <y>0</y>
-         <width>101</width>
-         <height>20</height>
-        </rect>
+        </size>
        </property>
       </widget>
      </widget>
@@ -268,23 +191,10 @@
      <string>Current filename</string>
     </property>
    </widget>
-   <widget class="QLabel" name="newFilenameLabelHeader">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>60</y>
-      <width>151</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>New filename</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="titleLabel">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>140</x>
       <y>60</y>
       <width>151</width>
       <height>16</height>
@@ -297,7 +207,7 @@
    <widget class="QLabel" name="artistLabel">
     <property name="geometry">
      <rect>
-      <x>590</x>
+      <x>310</x>
       <y>60</y>
       <width>151</width>
       <height>16</height>
@@ -310,7 +220,7 @@
    <widget class="QLabel" name="albumLabel">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>480</x>
       <y>60</y>
       <width>101</width>
       <height>16</height>
@@ -323,7 +233,7 @@
    <widget class="QLabel" name="yearLabel">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>600</x>
       <y>60</y>
       <width>51</width>
       <height>16</height>
@@ -336,7 +246,7 @@
    <widget class="QLabel" name="genreLabel">
     <property name="geometry">
      <rect>
-      <x>950</x>
+      <x>670</x>
       <y>60</y>
       <width>101</width>
       <height>16</height>
@@ -349,7 +259,7 @@
    <widget class="QLabel" name="publisherLabel">
     <property name="geometry">
      <rect>
-      <x>1070</x>
+      <x>790</x>
       <y>60</y>
       <width>101</width>
       <height>16</height>
@@ -362,7 +272,7 @@
    <widget class="QLabel" name="keyLabel">
     <property name="geometry">
      <rect>
-      <x>1190</x>
+      <x>910</x>
       <y>60</y>
       <width>31</width>
       <height>16</height>
@@ -375,7 +285,7 @@
    <widget class="QLabel" name="bpmLabel">
     <property name="geometry">
      <rect>
-      <x>1240</x>
+      <x>960</x>
       <y>60</y>
       <width>31</width>
       <height>16</height>
@@ -388,9 +298,9 @@
    <widget class="QLabel" name="beatportLabel">
     <property name="geometry">
      <rect>
-      <x>1290</x>
+      <x>1010</x>
       <y>60</y>
-      <width>201</width>
+      <width>441</width>
       <height>16</height>
      </rect>
     </property>
@@ -412,6 +322,99 @@
     </property>
     <property name="checkable">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="titleLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>141</x>
+      <y>91</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="publisherLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>791</x>
+      <y>91</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="albumLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>481</x>
+      <y>91</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="genreLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>671</x>
+      <y>91</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="yearLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>601</x>
+      <y>91</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="artistLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>311</x>
+      <y>91</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="keyLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>911</x>
+      <y>91</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="bpmLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>961</x>
+      <y>91</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="beatportComboBox">
+    <property name="geometry">
+     <rect>
+      <x>1011</x>
+      <y>91</y>
+      <width>441</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string/>
     </property>
    </widget>
   </widget>
