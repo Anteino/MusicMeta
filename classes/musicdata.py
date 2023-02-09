@@ -1,7 +1,6 @@
 import re
 import mutagen
-from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, COMM
-
+from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, TRCK
 class MusicData:
     beatportData = {}
     
@@ -24,6 +23,8 @@ class MusicData:
         self.publisher = self.extractKey(file, 'TPUB')[0]
         self.key = self.extractKey(file, 'TKEY')[0]
         self.bpm = self.extractKey(file, 'TBPM')[0]
+        self.beatportId = self.extractKey(file, 'TRCK')[0]
+        self.oldBeatportId = self.beatportId
     
     def extractKey(self, file, key):
         if(key in file):
@@ -49,7 +50,6 @@ class MusicData:
         tags["TPUB"] = TPUB(encoding=3, text=self.publisher)
         tags["TKEY"] = TKEY(encoding=3, text=self.key)
         tags["TBPM"] = TBPM(encoding=3, text=self.bpm)
-
-        tags["COMM"] = COMM(encoding=3, lang=u'eng', desc='desc', text=u'MusicMeta by Anteino was used to edit meta data of this song.')
+        tags["TRCK"] = TRCK(encoding=3, text=self.beatportId)
 
         tags.save(self.fullpath)

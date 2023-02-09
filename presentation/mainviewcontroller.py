@@ -12,7 +12,7 @@ from model.beatportSearch import beatportSearch as search
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = "C:\\Users\\admin\\Music\\SoundCloud"
+    root = "C:\\Users\\admin\\Music\\Tidal\\Dubstep"
     musicData = []
 
     def __init__(self):
@@ -78,6 +78,7 @@ class MainViewController():
     def resetTags(self, index):
         musicLine = self.mainView.musicLines[index]
         musicData = self.musicData[index]
+        musicData.beatportId = musicData.oldBeatportId
 
         musicLine.titleLineEdit.setText(musicData.title)
         musicLine.artistLineEdit.setText(musicData.artist)
@@ -90,6 +91,7 @@ class MainViewController():
     
     def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
         track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]
+        self.musicData[musicIndex].beatportId = str(track["id"])
 
         title = track["name"] +  " (" + track["mix_name"] + ")"
 
