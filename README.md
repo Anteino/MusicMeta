@@ -8,11 +8,21 @@ Warning, this is not Shazam. The program takes just the name of your file and us
 
 The program can also be used to manually change meta data in a GUI environment. This program makes it much easier to change such data in bulk.
 
+# How to use
+
+Start the program and use the "Open folder" button to load in a folder containing music. The program will automatically load subfolders as well. You can now start editing the audio tags. You can save the tags to your files at any point using the "Save tags for selected songs" button. As the name suggests, only songs that are selected will have their tags overwritten with the currently inputted data.
+
+Additionally you can click the "Import from Beatport" button to collect track information. On the far right, the drop down menus for each song will be populated with track info from Beatport. The correct track might or might not be in that list. If the correct track is, in fact, in the list you can load its info by clicking it. The track will then be automatically selected for saving.
+
+Make sure that if you select the wrong track in the drop down menu, you manually deselect the song for saving, or you will save the wrong tags to your file.
+
+Lastly, do not try to scroll down in the view while your cursor is on one of the drop down menus. This will cause track info to automatically be loaded in and select the line for saving.
+
 # Known bugs:
 
 - Currently, only MP3 files are supported. The program will even break WAV files when trying to edit their tags. So I excluded all extensions but MP3 for now.
 - Mutagen separates artists by using a forward slash /. This is problematic when bands like AC/DC are involved since they will be splitted into "two bands": AC and DC by the software.
-- The Beatport API has a tag called "mix_name". This can have values like "Original mix", "Pleasurekraft edit", "Extended mix", etc. The problem is that some songs have this mix_name in their title while others don't. But Beatport does not make a difference between this. So I had to choose between always including it in the title or never including it. I chose to always include it in both filename as well as song title.
+- The Beatport API has a tag called "mix_name". This can have values like "Original mix", "Pleasurekraft edit", "Extended mix", etc. The problem is that some songs have this mix_name in their title while others don't. But Beatport does not make a difference between this. So I had to choose between always including it in the title or never including it. I chose to always include it in the song title, but I might add a configurator to change this later.
 - Some songs will simply not be in the Beatport API. If anyone knows of a more complete or additional API, I might implement it later.
 
 # Possible future work
