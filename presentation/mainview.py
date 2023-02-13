@@ -166,7 +166,6 @@ class MainView(QMainWindow):
                     for j in range(1, len(track["artists"])):
                         artist = track["artists"][j]
                         line += ", " + artist["name"]
-                    line += " (publ: " + track["release"]["label"]["name"] + ")"
                     self.musicLines[i].beatportComboBox.addItem(line)
     
     def addMusicDataFrame(self, data):

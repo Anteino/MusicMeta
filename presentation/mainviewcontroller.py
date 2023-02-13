@@ -12,7 +12,7 @@ from model.beatportSearch import beatportSearch as search
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = "C:\\Users\\admin\\Music\\Tidal\\Dubstep"
+    root = ""
     musicData = []
 
     def __init__(self):
