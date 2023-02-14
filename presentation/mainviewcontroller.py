@@ -12,7 +12,7 @@ from model.beatportSearch import beatportSearch as search
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = ""
+    root = "C:\\Users\\admin\\Music\\Tidal\\NL Meezingers"
     musicData = []
 
     def __init__(self):
@@ -88,6 +88,15 @@ class MainViewController():
         musicLine.publisherLineEdit.setText(musicData.publisher)
         musicLine.keyLineEdit.setText(musicData.key)
         musicLine.bpmLineEdit.setText(musicData.bpm)
+
+        musicLine.titleButton.setText(musicData.title)
+        musicLine.artistButton.setText(musicData.artist)
+        musicLine.albumButton.setText(musicData.album)
+        musicLine.yearButton.setText(musicData.year)
+        musicLine.genreButton.setText(musicData.genre)
+        musicLine.publisherButton.setText(musicData.publisher)
+        musicLine.keyButton.setText(musicData.key)
+        musicLine.bpmButton.setText(musicData.bpm)
     
     def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
         track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]
@@ -109,14 +118,14 @@ class MainViewController():
 
         musicLine = self.mainView.musicLines[musicIndex]
 
-        musicLine.titleLineEdit.setText(title)
-        musicLine.artistLineEdit.setText(artists)
-        musicLine.albumLineEdit.setText(album)
-        musicLine.yearLineEdit.setText(year)
-        musicLine.genreLineEdit.setText(genre)
-        musicLine.publisherLineEdit.setText(publisher)
-        musicLine.keyLineEdit.setText(key)
-        musicLine.bpmLineEdit.setText(bpm)
+        musicLine.titleButton.setText(title)
+        musicLine.artistButton.setText(artists)
+        musicLine.albumButton.setText(album)
+        musicLine.yearButton.setText(year)
+        musicLine.genreButton.setText(genre)
+        musicLine.publisherButton.setText(publisher)
+        musicLine.keyButton.setText(key)
+        musicLine.bpmButton.setText(bpm)
 
         self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
         self.lineCheckBoxClicked(musicIndex)

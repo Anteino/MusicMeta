@@ -24,7 +24,7 @@ class MainView(QMainWindow):
     def initUI(self):
         self.setObjectName("MainView")
         self.setGeometry(WINDOW_POSITION[0], WINDOW_POSITION[1], WINDOW_SIZE[0], WINDOW_SIZE[1])
-        self.setMinimumSize(QtCore.QSize(WINDOW_SIZE[0], WINDOW_SIZE[1]))
+        # self.setMinimumSize(QtCore.QSize(WINDOW_SIZE[0], WINDOW_SIZE[1]))
         self.setMaximumSize(QtCore.QSize(WINDOW_SIZE[0], WINDOW_SIZE[1]))
         self.setAnimated(True)
         
@@ -66,10 +66,6 @@ class MainView(QMainWindow):
         self.currentFilenameLabelHeader = QtWidgets.QLabel(self)
         self.currentFilenameLabelHeader.setGeometry(QtCore.QRect(40, 60, 201, 16))
         self.currentFilenameLabelHeader.setObjectName("currentFilenameLabelHeader")
-        
-        self.undoLabel = QtWidgets.QLabel(self)
-        self.undoLabel.setGeometry(QtCore.QRect(250, 60, 26, 16))
-        self.undoLabel.setObjectName("undoLabel")
 
         self.titleLabel = QtWidgets.QLabel(self)
         self.titleLabel.setGeometry(QtCore.QRect(290, 60, 151, 16))
@@ -104,7 +100,7 @@ class MainView(QMainWindow):
         self.bpmLabel.setObjectName("bpmLabel")
 
         self.beatportLabel = QtWidgets.QLabel(self)
-        self.beatportLabel.setGeometry(QtCore.QRect(1160, 60, 531, 16))
+        self.beatportLabel.setGeometry(QtCore.QRect(1170, 60, 531, 16))
         self.beatportLabel.setObjectName("beatportLabel")
         
         self.scrollArea = QtWidgets.QScrollArea(self)
@@ -119,7 +115,6 @@ class MainView(QMainWindow):
         self.beatportButton.setText(_translate("MainWindow", IMPORT_BEATPORT))
         self.saveButton.setText(_translate("MainWindow", SAVE))
         self.currentFilenameLabelHeader.setText(_translate("MainWindow", CURRENT_FILENAME))
-        self.undoLabel.setText(_translate("MainWindow", UNDO))
         self.titleLabel.setText(_translate("MainWindow", TITLE))
         self.artistLabel.setText(_translate("MainWindow", ARTIST))
         self.albumLabel.setText(_translate("MainWindow", ALBUM))
@@ -138,23 +133,13 @@ class MainView(QMainWindow):
         
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
         self.scrollAreaWidgetContents.setFixedWidth(1701)
-        self.scrollAreaWidgetContents.setMinimumHeight(max(len(data) * 40 + 10, 459))
+        self.scrollAreaWidgetContents.setMinimumHeight(max(len(data) * 80 + 10, 459))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
 
         for item in data:
             self.addMusicDataFrame(item)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-    
-    def updateMusicLine(self, index, data):
-        self.musicLines[index].titleLineEdit.setText(data.title)
-        self.musicLines[index].artistLineEdit.setText(data.artist)
-        self.musicLines[index].albumLineEdit.setText(data.album)
-        self.musicLines[index].yearLineEdit.setText(data.year)
-        self.musicLines[index].genreLineEdit.setText(data.genre)
-        self.musicLines[index].publisherLineEdit.setText(data.publisher)
-        self.musicLines[index].keyLineEdit.setText(data.key)
-        self.musicLines[index].bpmLineEdit.setText(data.bpm)
     
     def updateBeatportData(self, musicData):
         for i in range(len(musicData)):
