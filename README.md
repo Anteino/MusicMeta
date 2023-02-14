@@ -12,6 +12,8 @@ The program can also be used to manually change meta data in a GUI environment. 
 
 Start the program and use the "Open folder" button to load in a folder containing music. The program will automatically load subfolders as well. You can now start editing the audio tags. You can save the tags to your files at any point using the "Save tags for selected songs" button. As the name suggests, only songs that are selected will have their tags overwritten with the currently inputted data.
 
+If your songs were already imported in Rekordbox and analyzed, you can use the key and bpm information assigned by Rekordbox. Export your library to XML from Rekordbox and import this XML with the "Import Rekordbox collection" button. The key and bpm will then be overwritten for all songs that do not have this field set YET. Note that MusicMeta uses Camelot notation and Rekordbox will either use classical notation or camelot depending on your settings.
+
 Additionally you can click the "Import from Beatport" button to collect track information. On the far right, the drop down menus for each song will be populated with track info from Beatport. The correct track might or might not be in that list. If the correct track is, in fact, in the list you can load its info by clicking it. The buttons under the line edits will be populated with the collected data. A button can be clicked to move its data to the line edit above it. To move all the data up at once, click the arrow up button on the far left. The track will be automatically selected for saving after clicking one of the options in the drop down menu.
 
 Make sure that if you select the wrong track in the drop down menu, you manually deselect the song for saving, or you will save the wrong tags to your file.

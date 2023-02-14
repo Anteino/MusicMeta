@@ -1,23 +1,27 @@
 import asyncio
-import aiohttp
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication
+import pathlib
+import urllib.parse
+import os
 import sys
 
 sys.path.append('../MusicMeta')
 from utils.constants import *
 from utils.musicReader import musicReader as reader
+from utils.importRbCollection import importRbCollection as collect
 from model.beatportSearch import beatportSearch as search
 
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = ""
+    root = "C:\\Users\\admin\\Music\\Tidal\\Nostalgia"
     musicData = []
+    rbDB = []
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.rekordboxButtonClicked)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -37,6 +41,38 @@ class MainViewController():
         self.mainView.setPathLabel(self.root)
         self.musicData = reader(self.root)
         self.mainView.repopulateMusicData(self.musicData)
+        self.overWriteRekordboxData()
+    
+    def rekordboxButtonClicked(self):
+        # path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
+        # if(path == ''):
+        #     return
+        path = "C:\\Users\\admin\\Music\\Tidal\\collection.xml"
+        self.rbDB = collect(path)
+        self.overWriteRekordboxData()
+    
+    def overWriteRekordboxData(self):
+        tempDB = self.rbDB
+        for track in tempDB:
+            for index in range(len(self.musicData)):
+                musicLine = self.mainView.musicLines[index]
+                try:
+                    filename = self.musicData[index].filename
+                    location = urllib.parse.unquote(track["@Location"].replace("\\", "/").split("/")[-1])
+                    if(location == filename):
+                        if(musicLine.keyButton.text() == ""):
+                            key = track["@Tonality"]
+                            musicLine.keyButton.setText(key)
+                            musicLine.keyLineEdit.setText(key)
+                            self.musicData[index].key = key
+                        if(musicLine.bpmButton.text() == ""):
+                            bpm = track["@AverageBpm"]
+                            musicLine.bpmButton.setText(bpm)
+                            musicLine.bpmLineEdit.setText(bpm)
+                            self.musicData[index].bpm = bpm
+                        break
+                except:
+                    pass
     
     def beatportButtonClicked(self):
         try:

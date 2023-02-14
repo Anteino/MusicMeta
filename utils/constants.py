@@ -7,6 +7,7 @@ WINDOW_SIZE = [1741, 541]
 
 WINDOW_TITLE = "MusicMeta by Anteino: easily edit track info."
 OPEN_FOLDER = "Open folder"
+IMPORT_REKORDBOX_DB = "Import rekordbox collection"
 IMPORT_BEATPORT = "Import from beatport"
 SAVE = "Save tags for selected songs"
 

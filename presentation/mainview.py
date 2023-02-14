@@ -9,7 +9,7 @@ from presentation.components.musicline import MusicLine
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags, rekordboxButtonClicked):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
@@ -18,13 +18,13 @@ class MainView(QMainWindow):
         self.beatportComboBoxChanged = beatportComboBoxChanged
         self.saveButtonClicked = saveButtonClicked
         self.resetTags = resetTags
+        self.rekordboxButtonClicked = rekordboxButtonClicked
         self.initUI()
         self.retranslateUi()
     
     def initUI(self):
         self.setObjectName("MainView")
         self.setGeometry(WINDOW_POSITION[0], WINDOW_POSITION[1], WINDOW_SIZE[0], WINDOW_SIZE[1])
-        # self.setMinimumSize(QtCore.QSize(WINDOW_SIZE[0], WINDOW_SIZE[1]))
         self.setMaximumSize(QtCore.QSize(WINDOW_SIZE[0], WINDOW_SIZE[1]))
         self.setAnimated(True)
         
@@ -39,14 +39,20 @@ class MainView(QMainWindow):
         self.pathLabel.setText("")
         self.pathLabel.setObjectName("pathLabel")
         
+        self.rekordboxButton = QtWidgets.QPushButton(self)
+        self.rekordboxButton.setGeometry(QtCore.QRect(760, 10, 161, 31))
+        self.rekordboxButton.setCheckable(False)
+        self.rekordboxButton.setObjectName("rekordboxButton")
+        self.rekordboxButton.clicked.connect(self.rekordboxButtonClicked)
+        
         self.beatportButton = QtWidgets.QPushButton(self)
-        self.beatportButton.setGeometry(QtCore.QRect(760, 10, 151, 31))
+        self.beatportButton.setGeometry(QtCore.QRect(940, 10, 151, 31))
         self.beatportButton.setCheckable(False)
         self.beatportButton.setObjectName("beatportButton")
         self.beatportButton.clicked.connect(self.beatportButtonClicked)
         
         self.saveButton = QtWidgets.QPushButton(self)
-        self.saveButton.setGeometry(QtCore.QRect(931, 10, 201, 31))
+        self.saveButton.setGeometry(QtCore.QRect(1111, 10, 201, 31))
         self.saveButton.setCheckable(False)
         self.saveButton.setObjectName("saveButton")
         self.saveButton.clicked.connect(self.saveButtonClicked)
@@ -112,6 +118,7 @@ class MainView(QMainWindow):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(WINDOW_TITLE)
         self.openFolderButton.setText(_translate("MainWindow", OPEN_FOLDER))
+        self.rekordboxButton.setText(_translate("MainWindow", IMPORT_REKORDBOX_DB))
         self.beatportButton.setText(_translate("MainWindow", IMPORT_BEATPORT))
         self.saveButton.setText(_translate("MainWindow", SAVE))
         self.currentFilenameLabelHeader.setText(_translate("MainWindow", CURRENT_FILENAME))
