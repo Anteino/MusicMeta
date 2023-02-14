@@ -15,7 +15,7 @@ from model.beatportSearch import beatportSearch as search
 from presentation.mainview import MainView
 
 class MainViewController():
-    root = "C:\\Users\\admin\\Music\\Tidal\\Nostalgia"
+    root = ""
     musicData = []
     rbDB = []
 
