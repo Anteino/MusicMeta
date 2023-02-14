@@ -1,6 +1,6 @@
 import asyncio
 import aiohttp
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication
 import sys
 
@@ -17,7 +17,7 @@ class MainViewController():
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -75,8 +75,32 @@ class MainViewController():
                 if(self.mainView.musicLines[i].checkBox.isChecked() != tmp): return
             self.mainView.selectAllCheckBox.setChecked(tmp)
     
+    def resetTags(self, index):
+        musicLine = self.mainView.musicLines[index]
+        musicData = self.musicData[index]
+        musicData.beatportId = musicData.oldBeatportId
+
+        musicLine.titleLineEdit.setText(musicData.title)
+        musicLine.artistLineEdit.setText(musicData.artist)
+        musicLine.albumLineEdit.setText(musicData.album)
+        musicLine.yearLineEdit.setText(musicData.year)
+        musicLine.genreLineEdit.setText(musicData.genre)
+        musicLine.publisherLineEdit.setText(musicData.publisher)
+        musicLine.keyLineEdit.setText(musicData.key)
+        musicLine.bpmLineEdit.setText(musicData.bpm)
+
+        musicLine.titleButton.setText(musicData.title)
+        musicLine.artistButton.setText(musicData.artist)
+        musicLine.albumButton.setText(musicData.album)
+        musicLine.yearButton.setText(musicData.year)
+        musicLine.genreButton.setText(musicData.genre)
+        musicLine.publisherButton.setText(musicData.publisher)
+        musicLine.keyButton.setText(musicData.key)
+        musicLine.bpmButton.setText(musicData.bpm)
+    
     def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
         track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]
+        self.musicData[musicIndex].beatportId = str(track["id"])
 
         title = track["name"] +  " (" + track["mix_name"] + ")"
 
@@ -85,8 +109,6 @@ class MainViewController():
             artist = track["artists"][j]
             artists += "/" + artist["name"]
 
-        newFilename = title + " - "  + artists
-        ext = self.musicData[musicIndex].extension
         album = track["release"]["name"]
         year = track["new_release_date"].split("-")[0]
         genre = track["genre"]["name"]
@@ -94,17 +116,17 @@ class MainViewController():
         key = str(track["key"]["camelot_number"]) + track["key"]["camelot_letter"]
         bpm = str(track["bpm"])
 
-        self.musicData[musicIndex].newFilename = newFilename + "." + ext
-        self.musicData[musicIndex].title = title
-        self.musicData[musicIndex].artist = artists
-        self.musicData[musicIndex].album = album
-        self.musicData[musicIndex].year = year
-        self.musicData[musicIndex].genre = genre
-        self.musicData[musicIndex].publisher = publisher
-        self.musicData[musicIndex].key = key
-        self.musicData[musicIndex].bpm = bpm
+        musicLine = self.mainView.musicLines[musicIndex]
 
-        self.mainView.updateMusicLine(musicIndex, self.musicData[musicIndex])
+        musicLine.titleButton.setText(title)
+        musicLine.artistButton.setText(artists)
+        musicLine.albumButton.setText(album)
+        musicLine.yearButton.setText(year)
+        musicLine.genreButton.setText(genre)
+        musicLine.publisherButton.setText(publisher)
+        musicLine.keyButton.setText(key)
+        musicLine.bpmButton.setText(bpm)
+
         self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
         self.lineCheckBoxClicked(musicIndex)
     
@@ -113,11 +135,6 @@ class MainViewController():
             musicLine = self.mainView.musicLines[index]
 
             if(musicLine.checkBox.isChecked()):
-                tmp = musicLine.newFilenameLineEdit.text()
-                ext = self.musicData[index].extension
-                if(tmp.find(ext) == -1):
-                    tmp = tmp + "." + ext
-                self.musicData[index].newFilename = tmp
                 self.musicData[index].title = musicLine.titleLineEdit.text()
                 self.musicData[index].artist = musicLine.artistLineEdit.text()
                 self.musicData[index].album = musicLine.albumLineEdit.text()
