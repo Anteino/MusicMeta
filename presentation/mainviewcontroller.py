@@ -44,10 +44,9 @@ class MainViewController():
         self.overWriteRekordboxData()
     
     def rekordboxButtonClicked(self):
-        # path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
-        # if(path == ''):
-        #     return
-        path = "C:\\Users\\admin\\Music\\Tidal\\collection.xml"
+        path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
+        if(path == ''):
+            return
         self.rbDB = collect(path)
         self.overWriteRekordboxData()
     
@@ -60,16 +59,22 @@ class MainViewController():
                     filename = self.musicData[index].filename
                     location = urllib.parse.unquote(track["@Location"].replace("\\", "/").split("/")[-1])
                     if(location == filename):
+                        changed = False
                         if(musicLine.keyButton.text() == ""):
+                            changed = True
                             key = track["@Tonality"]
                             musicLine.keyButton.setText(key)
                             musicLine.keyLineEdit.setText(key)
                             self.musicData[index].key = key
                         if(musicLine.bpmButton.text() == ""):
+                            changed = True
                             bpm = track["@AverageBpm"]
                             musicLine.bpmButton.setText(bpm)
                             musicLine.bpmLineEdit.setText(bpm)
                             self.musicData[index].bpm = bpm
+                        if(changed):
+                            self.mainView.musicLines[index].checkBox.setChecked(True)
+                            self.lineCheckBoxClicked(index)
                         break
                 except:
                     pass

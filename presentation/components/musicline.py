@@ -5,6 +5,8 @@ sys.path.append('../../MusicMeta')
 
 class MusicLine:
     def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags):
+        self.timer = QtCore.QTimer()
+
         self.index = index
         self.lineCheckBoxClicked = lineCheckBoxClicked
         self.beatportComboBoxChanged = beatportComboBoxChanged
@@ -55,13 +57,20 @@ class MusicLine:
         if("Button" in name):
             widget.setStyleSheet("QPushButton { text-align: left; }")
             lineEdit = self.frame.findChild(QtWidgets.QLineEdit, name.replace("Button", "LineEdit"))
-            widget.clicked.connect(lambda: lineEdit.setText(widget.text()))
+            widget.clicked.connect(lambda: self.checkDoubleClick(lambda: lineEdit.setText(widget.text())))
             
         widget.setGeometry(QtCore.QRect(geometry[0], geometry[1], geometry[2], geometry[3]))
         widget.setText(text)
         widget.setObjectName(name)
 
         return widget
+
+    def checkDoubleClick(self, function):
+        if self.timer.isActive():
+            function()
+            self.timer.stop()
+        else:
+            self.timer.start(250)
     
     def addButton(self, geometry, iconName, function):
         self.commandLinkButton = QtWidgets.QCommandLinkButton(self.frame)
