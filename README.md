@@ -32,6 +32,7 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 - Perhaps I might add more tags later. As of now, the program contains enough tags for DJs.
 - The duration of the audio files is read into the program. I might add a function later that uses this information to refine the Beatport search. This might narrow the results down to just a single result that could be used to really automatically collect meta data whithout much human intervention.
 - I might take the current tags to further refine the Beatport search. However, this will cause problems if the tags have been set wrong before.
+- I might add a function to open the wiki page of a certain song (if there exists one) in a popup dialog. Most older or nostalgic songs are not on beatport and having a function to automatically open the wiki page might speed up the manual process significantly.
 
 # Disclaimer
 

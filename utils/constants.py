@@ -1,4 +1,5 @@
 BEATPORT_API_URL = "https://www.beatport.com/api/v4/catalog/search?q="
+WIKI_API_URL = "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch="
 
 ALLOWED_EXTENSIONS = ["mp3"]
 
