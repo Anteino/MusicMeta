@@ -9,14 +9,8 @@ from utils.constants import *
 def wikiSearch(data):
     pageId = wikiRequest(data, False)
 
-    result = -1
-
     if(pageId != -1):
-        result = constructWikiPage(pageId)
-    if(result == -1):
-        file = open("./wikipage.html", "w")
-        file.write("<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>")
-        file.close()
+        return constructWikiPage(pageId)
 
 def wikiRequest(query, nested):
     requestUrl = WIKI_API_URL + urllib.parse.quote(query)
@@ -37,7 +31,7 @@ def constructWikiPage(pageId):
         resp = requests.get(requestUrl).text
 
     if(resp.find("tbody") == -1):
-        return -1
+        return "<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>"
 
     head = resp.split("<head>")[1].split("</head>")[0]
     stylesheets = []
@@ -61,8 +55,4 @@ def constructWikiPage(pageId):
     html += "</tbody>\n</table>"
     html += '\n</body>\n</html>'
 
-    file = open("./wikipage.html", "w")
-    file.write(html)
-    file.close()
-
-    return 1
+    return html

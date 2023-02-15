@@ -81,10 +81,10 @@ class MainViewController():
     def openWikiPopup(self, index):
         print(self.musicData[index].name)
         try:
-            wikiSearch(self.musicData[index].name)
+            html = wikiSearch(self.musicData[index].name)
             self.Dialog = QtWidgets.QDialog()
             self.ui = WikiDialog()
-            self.ui.setupUi(self.Dialog, self.musicData[index].name)
+            self.ui.setupUi(self.Dialog, html, self.musicData[index].name)
             self.Dialog.show()
         except Exception as e:
             print("An exception occuring during handling of wikipedia request: ", end="")
