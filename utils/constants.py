@@ -1,7 +1,7 @@
 BEATPORT_API_URL = f"https://www.beatport.com/api/v4/catalog/search?q="
 WIKI_BASE_URL = f"https://en.wikipedia.org/"
-WIKI_API_URL = WIKI_BASE_URL + f"w/api.php?action=query&list=search&utf8=&format=json&srsearch="
-WIKI_CURID_URL = WIKI_BASE_URL + f"?curid="
+WIKI_API_URL = f"https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch="
+WIKI_CURID_URL = f"https://en.wikipedia.org/?curid="
 
 ALLOWED_EXTENSIONS = ["mp3"]
 
