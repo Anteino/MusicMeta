@@ -1,5 +1,7 @@
-BEATPORT_API_URL = "https://www.beatport.com/api/v4/catalog/search?q="
-WIKI_API_URL = "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch="
+BEATPORT_API_URL = f"https://www.beatport.com/api/v4/catalog/search?q="
+WIKI_BASE_URL = f"https://en.wikipedia.org/"
+WIKI_API_URL = WIKI_BASE_URL + f"w/api.php?action=query&list=search&utf8=&format=json&srsearch="
+WIKI_CURID_URL = WIKI_BASE_URL + f"?curid="
 
 ALLOWED_EXTENSIONS = ["mp3"]
 
@@ -21,4 +23,5 @@ GENRE = "Genre"
 PUBLISHER = "Publisher"
 KEY = "Key"
 BPM = "BPM"
-SELECT_BEATPORT_DATA = "Select beatport data"
+SELECT_DATA = "Select data or open wiki page"
+OPEN_WIKI_PAGE = "Open wiki"

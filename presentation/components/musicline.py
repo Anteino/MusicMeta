@@ -2,15 +2,17 @@ from PyQt5 import QtCore, QtWidgets, QtGui
 import sys
 
 sys.path.append('../../MusicMeta')
+from utils.constants import *
 
 class MusicLine:
-    def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags):
+    def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags, openWikiPopup):
         self.timer = QtCore.QTimer()
 
         self.index = index
         self.lineCheckBoxClicked = lineCheckBoxClicked
         self.beatportComboBoxChanged = beatportComboBoxChanged
         self.resetTags = resetTags
+        self.openWikiPopUp = openWikiPopup
 
         self.frame = QtWidgets.QFrame(super.scrollAreaWidgetContents)
         self.frame.setGeometry(QtCore.QRect(0, self.index  * 80 + 10, 1711, 61))
@@ -48,13 +50,20 @@ class MusicLine:
         self.beatportComboBox.setCurrentText("")
         self.beatportComboBox.setObjectName("beatportComboBox")
         self.beatportComboBox.activated[int].connect(self.onComboBoxChanged)
+
+        self.wikiButton = self.addWidget(QtWidgets.QPushButton(self.frame), [1170, 30, 71, 20], OPEN_WIKI_PAGE, "wikiButton")
     
     def onComboBoxChanged(self, comboBoxIndex):
         self.beatportComboBoxChanged(self.index, comboBoxIndex)
     
+    def wikiButtonClicked(self):
+        self.openWikiPopUp(self.index)
+    
     def addWidget(self, widgetType, geometry, text, name):
         widget = widgetType
-        if("Button" in name):
+        if("wiki" in name):
+            widget.clicked.connect(self.wikiButtonClicked)
+        elif("Button" in name):
             widget.setStyleSheet("QPushButton { text-align: left; }")
             lineEdit = self.frame.findChild(QtWidgets.QLineEdit, name.replace("Button", "LineEdit"))
             widget.clicked.connect(lambda: self.checkDoubleClick(lambda: lineEdit.setText(widget.text())))

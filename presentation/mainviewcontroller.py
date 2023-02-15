@@ -1,9 +1,7 @@
 import asyncio
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication
-import pathlib
 import urllib.parse
-import os
 import sys
 
 sys.path.append('../MusicMeta')
@@ -11,17 +9,19 @@ from utils.constants import *
 from utils.musicReader import musicReader as reader
 from utils.importRbCollection import importRbCollection as collect
 from model.beatportSearch import beatportSearch as search
+from model.wikiSearch import wikiSearch
 
 from presentation.mainview import MainView
+from presentation.components.wikidialog import WikiDialog
 
 class MainViewController():
-    root = ""
+    root = "C:\\Users\\admin\\Music\\Tidal\\Nostalgia"
     musicData = []
     rbDB = []
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.rekordboxButtonClicked)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.openWikiPopup, self.rekordboxButtonClicked)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -78,6 +78,16 @@ class MainViewController():
                         break
                 except:
                     pass
+    
+    def openWikiPopup(self, index):
+        try:
+            wikiSearch(self.musicData[index].name)
+            self.Dialog = QtWidgets.QDialog()
+            self.ui = WikiDialog()
+            self.ui.setupUi(self.Dialog, self.musicData[index].name)
+            self.Dialog.show()
+        except:
+            pass
     
     def beatportButtonClicked(self):
         try:
