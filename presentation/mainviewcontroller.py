@@ -87,7 +87,7 @@ class MainViewController():
             self.ui.setupUi(self.Dialog, self.musicData[index].name)
             self.Dialog.show()
         except Exception as e:
-            print("Exception occuring during handling of wikipedia request: ", end="")
+            print("An exception occuring during handling of wikipedia request: ", end="")
             print(e)
     
     def beatportButtonClicked(self):

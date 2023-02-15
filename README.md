@@ -28,6 +28,7 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 - Mutagen separates artists by using a forward slash /. This is problematic when bands like AC/DC are involved since they will be splitted into "two bands": AC and DC by the software.
 - The Beatport API has a tag called "mix_name". This can have values like "Original mix", "Pleasurekraft edit", "Extended mix", etc. The problem is that some songs have this mix_name in their title while others don't. But Beatport does not make a difference between this. So I had to choose between always including it in the title or never including it. I chose to always include it in the song title, but I might add a configurator to change this later.
 - Some songs will simply not be in the Beatport API. If anyone knows of a more complete or additional API, I might implement it later.
+- Two identical wikipedia searches do not always yield identical search results. This non-deterministic behavior is out of my hands unfortunately.
 
 # Possible future work
 
