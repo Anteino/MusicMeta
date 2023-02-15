@@ -35,13 +35,12 @@ class MainViewController():
     
     def openFolderClicked(self):
         self.root = QtWidgets.QFileDialog.getExistingDirectory(self.mainView, OPEN_FOLDER)
-        if(self.root == ''):
-            return
-        self.mainView.selectAllCheckBox.setChecked(False)
-        self.mainView.setPathLabel(self.root)
-        self.musicData = reader(self.root)
-        self.mainView.repopulateMusicData(self.musicData)
-        self.overWriteRekordboxData()
+        if(self.root != ''):
+            self.mainView.selectAllCheckBox.setChecked(False)
+            self.mainView.setPathLabel(self.root)
+            self.musicData = reader(self.root)
+            self.mainView.repopulateMusicData(self.musicData)
+            self.overWriteRekordboxData()
     
     def rekordboxButtonClicked(self):
         path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
@@ -80,6 +79,7 @@ class MainViewController():
                     pass
     
     def openWikiPopup(self, index):
+        print(self.musicData[index].name)
         try:
             wikiSearch(self.musicData[index].name)
             self.Dialog = QtWidgets.QDialog()
