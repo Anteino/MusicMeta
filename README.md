@@ -12,7 +12,9 @@ The program can also be used to manually change meta data in a GUI environment. 
 
 Start the program and use the "Open folder" button to load in a folder containing music. The program will automatically load subfolders as well. You can now start editing the audio tags. You can save the tags to your files at any point using the "Save tags for selected songs" button. As the name suggests, only songs that are selected will have their tags overwritten with the currently inputted data.
 
-Additionally you can click the "Import from Beatport" button to collect track information. On the far right, the drop down menus for each song will be populated with track info from Beatport. The correct track might or might not be in that list. If the correct track is, in fact, in the list you can load its info by clicking it. The buttons under the line edits will be populated with the collected data. A button can be clicked to move its data to the line edit above it. To move all the data up at once, click the arrow up button on the far left. The track will be automatically selected for saving after clicking one of the options in the drop down menu.
+Additionally you can click the "Import from Beatport" button to collect track information. On the far right, the drop down menus for each song will be populated with track info from Beatport. The correct track might or might not be in that list. If the correct track is, in fact, in the list you can load its info by clicking it. The buttons under the line edits will be populated with the collected data. A button can be double clicked to move its data to the line edit above it. To move all the data up at once, click the arrow up button on the far left. The track will be automatically selected for saving after clicking one of the options in the drop down menu.
+
+If your songs were already imported in Rekordbox and analyzed, you can use the key and bpm information assigned by Rekordbox. Export your library to XML from Rekordbox and import this XML with the "Import Rekordbox collection" button. The key and bpm will then be overwritten for all songs that do not have this field set YET. Note that MusicMeta uses Camelot notation and Rekordbox will either use classical notation or camelot depending on your settings.
 
 Make sure that if you select the wrong track in the drop down menu, you manually deselect the song for saving, or you will save the wrong tags to your file.
 
@@ -30,6 +32,8 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 - Perhaps I might add more tags later. As of now, the program contains enough tags for DJs.
 - The duration of the audio files is read into the program. I might add a function later that uses this information to refine the Beatport search. This might narrow the results down to just a single result that could be used to really automatically collect meta data whithout much human intervention.
 - I might take the current tags to further refine the Beatport search. However, this will cause problems if the tags have been set wrong before.
+- I might add a function to open the wiki page of a certain song (if there exists one) in a popup dialog. Most older or nostalgic songs are not on beatport and having a function to automatically open the wiki page might speed up the manual process significantly.
+- Might do the same for discogs since I noticed they're especially complete for older music.
 
 # Disclaimer
 

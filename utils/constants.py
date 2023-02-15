@@ -1,4 +1,5 @@
 BEATPORT_API_URL = "https://www.beatport.com/api/v4/catalog/search?q="
+WIKI_API_URL = "https://en.wikipedia.org/w/api.php?action=query&list=search&utf8=&format=json&srsearch="
 
 ALLOWED_EXTENSIONS = ["mp3"]
 
@@ -7,6 +8,7 @@ WINDOW_SIZE = [1741, 541]
 
 WINDOW_TITLE = "MusicMeta by Anteino: easily edit track info."
 OPEN_FOLDER = "Open folder"
+IMPORT_REKORDBOX_DB = "Import Rekordbox collection"
 IMPORT_BEATPORT = "Import from beatport"
 SAVE = "Save tags for selected songs"
 

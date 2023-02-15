@@ -1,6 +1,5 @@
 import sys
 import aiohttp
-import re
 import urllib.parse
 
 sys.path.append('../MusicMeta')
