@@ -1,23 +1,27 @@
 import asyncio
-import aiohttp
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication
+import urllib.parse
 import sys
 
 sys.path.append('../MusicMeta')
 from utils.constants import *
 from utils.musicReader import musicReader as reader
+from utils.importRbCollection import importRbCollection as collect
 from model.beatportSearch import beatportSearch as search
+from model.wikiSearch import wikiSearch
 
 from presentation.mainview import MainView
+from presentation.components.wikidialog import WikiDialog
 
 class MainViewController():
     root = ""
     musicData = []
+    rbDB = []
 
     def __init__(self):
         self.app = QApplication(sys.argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked)
+        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.openWikiPopup, self.rekordboxButtonClicked)
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -31,12 +35,59 @@ class MainViewController():
     
     def openFolderClicked(self):
         self.root = QtWidgets.QFileDialog.getExistingDirectory(self.mainView, OPEN_FOLDER)
-        if(self.root == ''):
+        if(self.root != ''):
+            self.mainView.selectAllCheckBox.setChecked(False)
+            self.mainView.setPathLabel(self.root)
+            self.musicData = reader(self.root)
+            self.mainView.repopulateMusicData(self.musicData)
+            self.overWriteRekordboxData()
+    
+    def rekordboxButtonClicked(self):
+        path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
+        if(path == ''):
             return
-        self.mainView.selectAllCheckBox.setChecked(False)
-        self.mainView.setPathLabel(self.root)
-        self.musicData = reader(self.root)
-        self.mainView.repopulateMusicData(self.musicData)
+        self.rbDB = collect(path)
+        self.overWriteRekordboxData()
+    
+    def overWriteRekordboxData(self):
+        tempDB = self.rbDB
+        for track in tempDB:
+            for index in range(len(self.musicData)):
+                musicLine = self.mainView.musicLines[index]
+                try:
+                    filename = self.musicData[index].filename
+                    location = urllib.parse.unquote(track["@Location"].replace("\\", "/").split("/")[-1])
+                    if(location == filename):
+                        changed = False
+                        if(musicLine.keyButton.text() == ""):
+                            changed = True
+                            key = track["@Tonality"]
+                            musicLine.keyButton.setText(key)
+                            musicLine.keyLineEdit.setText(key)
+                            self.musicData[index].key = key
+                        if(musicLine.bpmButton.text() == ""):
+                            changed = True
+                            bpm = track["@AverageBpm"]
+                            musicLine.bpmButton.setText(bpm)
+                            musicLine.bpmLineEdit.setText(bpm)
+                            self.musicData[index].bpm = bpm
+                        if(changed):
+                            self.mainView.musicLines[index].checkBox.setChecked(True)
+                            self.lineCheckBoxClicked(index)
+                        break
+                except:
+                    pass
+    
+    def openWikiPopup(self, index):
+        try:
+            html = wikiSearch(self.musicData[index].name)
+            self.Dialog = QtWidgets.QDialog()
+            self.ui = WikiDialog()
+            self.ui.setupUi(self.Dialog, html, self.musicData[index].name)
+            self.Dialog.show()
+        except Exception as e:
+            print("An exception occuring during handling of wikipedia request: ", end="")
+            print(e)
     
     def beatportButtonClicked(self):
         try:
@@ -75,8 +126,32 @@ class MainViewController():
                 if(self.mainView.musicLines[i].checkBox.isChecked() != tmp): return
             self.mainView.selectAllCheckBox.setChecked(tmp)
     
+    def resetTags(self, index):
+        musicLine = self.mainView.musicLines[index]
+        musicData = self.musicData[index]
+        musicData.beatportId = musicData.oldBeatportId
+
+        musicLine.titleLineEdit.setText(musicData.title)
+        musicLine.artistLineEdit.setText(musicData.artist)
+        musicLine.albumLineEdit.setText(musicData.album)
+        musicLine.yearLineEdit.setText(musicData.year)
+        musicLine.genreLineEdit.setText(musicData.genre)
+        musicLine.publisherLineEdit.setText(musicData.publisher)
+        musicLine.keyLineEdit.setText(musicData.key)
+        musicLine.bpmLineEdit.setText(musicData.bpm)
+
+        musicLine.titleButton.setText(musicData.title)
+        musicLine.artistButton.setText(musicData.artist)
+        musicLine.albumButton.setText(musicData.album)
+        musicLine.yearButton.setText(musicData.year)
+        musicLine.genreButton.setText(musicData.genre)
+        musicLine.publisherButton.setText(musicData.publisher)
+        musicLine.keyButton.setText(musicData.key)
+        musicLine.bpmButton.setText(musicData.bpm)
+    
     def beatportComboBoxChanged(self, musicIndex, comboBoxIndex):
         track = self.musicData[musicIndex].beatportData["tracks"][comboBoxIndex]
+        self.musicData[musicIndex].beatportId = str(track["id"])
 
         title = track["name"] +  " (" + track["mix_name"] + ")"
 
@@ -85,8 +160,6 @@ class MainViewController():
             artist = track["artists"][j]
             artists += "/" + artist["name"]
 
-        newFilename = title + " - "  + artists
-        ext = self.musicData[musicIndex].extension
         album = track["release"]["name"]
         year = track["new_release_date"].split("-")[0]
         genre = track["genre"]["name"]
@@ -94,17 +167,17 @@ class MainViewController():
         key = str(track["key"]["camelot_number"]) + track["key"]["camelot_letter"]
         bpm = str(track["bpm"])
 
-        self.musicData[musicIndex].newFilename = newFilename + "." + ext
-        self.musicData[musicIndex].title = title
-        self.musicData[musicIndex].artist = artists
-        self.musicData[musicIndex].album = album
-        self.musicData[musicIndex].year = year
-        self.musicData[musicIndex].genre = genre
-        self.musicData[musicIndex].publisher = publisher
-        self.musicData[musicIndex].key = key
-        self.musicData[musicIndex].bpm = bpm
+        musicLine = self.mainView.musicLines[musicIndex]
 
-        self.mainView.updateMusicLine(musicIndex, self.musicData[musicIndex])
+        musicLine.titleButton.setText(title)
+        musicLine.artistButton.setText(artists)
+        musicLine.albumButton.setText(album)
+        musicLine.yearButton.setText(year)
+        musicLine.genreButton.setText(genre)
+        musicLine.publisherButton.setText(publisher)
+        musicLine.keyButton.setText(key)
+        musicLine.bpmButton.setText(bpm)
+
         self.mainView.musicLines[musicIndex].checkBox.setChecked(True)
         self.lineCheckBoxClicked(musicIndex)
     
@@ -113,11 +186,6 @@ class MainViewController():
             musicLine = self.mainView.musicLines[index]
 
             if(musicLine.checkBox.isChecked()):
-                tmp = musicLine.newFilenameLineEdit.text()
-                ext = self.musicData[index].extension
-                if(tmp.find(ext) == -1):
-                    tmp = tmp + "." + ext
-                self.musicData[index].newFilename = tmp
                 self.musicData[index].title = musicLine.titleLineEdit.text()
                 self.musicData[index].artist = musicLine.artistLineEdit.text()
                 self.musicData[index].album = musicLine.albumLineEdit.text()
