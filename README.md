@@ -22,6 +22,10 @@ Make sure that if you select the wrong track in the drop down menu, you manually
 
 Lastly, do not try to scroll down in the view while your cursor is on one of the drop down menus. This will cause track info to automatically be loaded in and select the line for saving.
 
+# How to build
+
+<code>PyInstaller .\MusicMeta.spec</code>
+
 # Known bugs:
 
 - Currently, only MP3 files are supported. The program will even break WAV files when trying to edit their tags. So I excluded all extensions but MP3 for now.
