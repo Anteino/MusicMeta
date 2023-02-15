@@ -1,8 +1,10 @@
 from PyQt5 import QtCore, QtWidgets, QtGui
+import os
 import sys
 
 sys.path.append('../../MusicMeta')
 from utils.constants import *
+from utils.resourcepath import resourcePath
 
 class MusicLine:
     def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags, openWikiPopup):
@@ -87,7 +89,7 @@ class MusicLine:
         self.commandLinkButton.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.commandLinkButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("assets/icons/" + iconName), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(resourcePath("assets/icons/" + iconName)), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.commandLinkButton.setIcon(icon)
         self.commandLinkButton.setIconSize(QtCore.QSize(18, 20))
         self.commandLinkButton.setObjectName("commandLinkButton")

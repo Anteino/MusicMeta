@@ -79,7 +79,6 @@ class MainViewController():
                     pass
     
     def openWikiPopup(self, index):
-        print(self.musicData[index].name)
         try:
             html = wikiSearch(self.musicData[index].name)
             self.Dialog = QtWidgets.QDialog()
