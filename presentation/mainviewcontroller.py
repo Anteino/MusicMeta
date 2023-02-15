@@ -15,7 +15,7 @@ from presentation.mainview import MainView
 from presentation.components.wikidialog import WikiDialog
 
 class MainViewController():
-    root = "C:\\Users\\admin\\Music\\Tidal\\Nostalgia"
+    root = ""
     musicData = []
     rbDB = []
 
