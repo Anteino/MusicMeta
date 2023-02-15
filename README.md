@@ -14,6 +14,8 @@ Start the program and use the "Open folder" button to load in a folder containin
 
 Additionally you can click the "Import from Beatport" button to collect track information. On the far right, the drop down menus for each song will be populated with track info from Beatport. The correct track might or might not be in that list. If the correct track is, in fact, in the list you can load its info by clicking it. The buttons under the line edits will be populated with the collected data. A button can be double clicked to move its data to the line edit above it. To move all the data up at once, click the arrow up button on the far left. The track will be automatically selected for saving after clicking one of the options in the drop down menu.
 
+When a song or its correct version cannot be found in the Beatport database, you can click the "Open wiki" button below the drop down menu. THe program will do its best to find the wiki page that belongs to said song and display it in a popup dialog. You don't have to close this dialog manually. When you click the wiki button for another song, the current dialog will be overwritten with the new page.
+
 If your songs were already imported in Rekordbox and analyzed, you can use the key and bpm information assigned by Rekordbox. Export your library to XML from Rekordbox and import this XML with the "Import Rekordbox collection" button. The key and bpm will then be overwritten for all songs that do not have this field set YET. Note that MusicMeta uses Camelot notation and Rekordbox will either use classical notation or camelot depending on your settings.
 
 Make sure that if you select the wrong track in the drop down menu, you manually deselect the song for saving, or you will save the wrong tags to your file.

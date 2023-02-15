@@ -9,7 +9,7 @@ from presentation.components.musicline import MusicLine
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags, rekordboxButtonClicked):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags, openWikiPopup, rekordboxButtonClicked):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
@@ -18,6 +18,7 @@ class MainView(QMainWindow):
         self.beatportComboBoxChanged = beatportComboBoxChanged
         self.saveButtonClicked = saveButtonClicked
         self.resetTags = resetTags
+        self.openWikiPopup = openWikiPopup
         self.rekordboxButtonClicked = rekordboxButtonClicked
         self.initUI()
         self.retranslateUi()
@@ -130,7 +131,7 @@ class MainView(QMainWindow):
         self.publisherLabel.setText(_translate("MainWindow", PUBLISHER))
         self.keyLabel.setText(_translate("MainWindow", KEY))
         self.bpmLabel.setText(_translate("MainWindow", BPM))
-        self.beatportLabel.setText(_translate("MainWindow", SELECT_BEATPORT_DATA))
+        self.beatportLabel.setText(_translate("MainWindow", SELECT_DATA))
     
     def setPathLabel(self, path):
         self.pathLabel.setText(path)
@@ -161,4 +162,4 @@ class MainView(QMainWindow):
                     self.musicLines[i].beatportComboBox.addItem(line)
     
     def addMusicDataFrame(self, data):
-        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.resetTags))
+        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.resetTags, self.openWikiPopup))
