@@ -86,8 +86,9 @@ class MainViewController():
             self.ui = WikiDialog()
             self.ui.setupUi(self.Dialog, self.musicData[index].name)
             self.Dialog.show()
-        except:
-            pass
+        except Exception as e:
+            print("Exception occuring during handling of wikipedia request: ", end="")
+            print(e)
     
     def beatportButtonClicked(self):
         try:

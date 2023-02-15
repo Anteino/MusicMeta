@@ -9,12 +9,14 @@ from utils.constants import *
 def wikiSearch(data):
     pageId = wikiRequest(data, False)
 
-    if(pageId == -1):
+    result = -1
+
+    if(pageId != -1):
+        result = constructWikiPage(pageId)
+    if(result == -1):
         file = open("./wikipage.html", "w")
         file.write("<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>")
         file.close()
-    else:
-        constructWikiPage(pageId)
 
 def wikiRequest(query, nested):
     requestUrl = WIKI_API_URL + urllib.parse.quote(query)
@@ -23,12 +25,19 @@ def wikiRequest(query, nested):
     if((nested) | ("suggestion" not in resp["query"]["searchinfo"])):
         return resp["query"]["search"][0]["pageid"]
     elif("suggestion" in resp["query"]["searchinfo"]):
-        wikiRequest(resp["query"]["searchinfo"]["suggestion"], True)
+        return wikiRequest(resp["query"]["searchinfo"]["suggestion"], True)
     else:
         return -1
     
 def constructWikiPage(pageId):
-    resp = requests.get(WIKI_CURID_URL + str(pageId)).text
+    requestUrl = WIKI_CURID_URL + str(pageId)
+
+    resp = ""
+    while(resp == ""):
+        resp = requests.get(requestUrl).text
+
+    if(resp.find("tbody") == -1):
+        return -1
 
     head = resp.split("<head>")[1].split("</head>")[0]
     stylesheets = []
@@ -56,4 +65,4 @@ def constructWikiPage(pageId):
     file.write(html)
     file.close()
 
-    return html
+    return 1
