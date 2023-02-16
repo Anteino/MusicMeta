@@ -49,7 +49,7 @@ def constructWikiPage(pageId):
         html += style + "\n"
     html += '</head>\n'
     html += '<body class="skin-vector skin-vector-search-vue vector-toc-pinned mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Ain_t_No_Other_Man rootpage-Ain_t_No_Other_Man skin-vector-2022 action-view">'
-    html += '<style type="text/css">li{display:inline}</style>'
+    # html += '<style type="text/css">li{display:inline}</style>'
     html += '<table class="infobox" style="border: 0; border-spacing: 0; margin: 0; padding: 0; float: left; font-size: 88\%; line-height: 1.5em; width: 22em;">\n<tbody>\n'
     html += resp.split("<tbody>")[1].split("</tbody>")[0].replace("=\"//upload", "=\"https://upload").replace('="/wiki', '="' + WIKI_BASE_URL + 'wiki')
     html += "</tbody>\n</table>"
