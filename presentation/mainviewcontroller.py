@@ -1,10 +1,9 @@
-import asyncio
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication
-import urllib.parse
-import sys
+from asyncio import get_event_loop, wait
+from PyQt5.QtWidgets import QDialog, QFileDialog, QApplication
+from urllib.parse import unquote
+from sys import path, argv, exit
 
-sys.path.append('../MusicMeta')
+path.append('../MusicMeta')
 from utils.constants import *
 from utils.musicReader import musicReader as reader
 from utils.importRbCollection import importRbCollection as collect
@@ -20,7 +19,7 @@ class MainViewController():
     rbDB = []
 
     def __init__(self):
-        self.app = QApplication(sys.argv)
+        self.app = QApplication(argv)
         self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.openWikiPopup, self.rekordboxButtonClicked)
     
     def show(self):
@@ -31,10 +30,10 @@ class MainViewController():
             self.mainView.repopulateMusicData(self.musicData)
 
         self.mainView.show()
-        sys.exit(self.app.exec_())
+        exit(self.app.exec_())
     
     def openFolderClicked(self):
-        self.root = QtWidgets.QFileDialog.getExistingDirectory(self.mainView, OPEN_FOLDER)
+        self.root = QFileDialog.getExistingDirectory(self.mainView, OPEN_FOLDER)
         if(self.root != ''):
             self.mainView.selectAllCheckBox.setChecked(False)
             self.mainView.setPathLabel(self.root)
@@ -43,7 +42,7 @@ class MainViewController():
             self.overWriteRekordboxData()
     
     def rekordboxButtonClicked(self):
-        path = QtWidgets.QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
+        path = QFileDialog.getOpenFileName(self.mainView, IMPORT_REKORDBOX_DB, "", "XML files (*.xml)")[0]
         if(path == ''):
             return
         self.rbDB = collect(path)
@@ -56,7 +55,7 @@ class MainViewController():
                 musicLine = self.mainView.musicLines[index]
                 try:
                     filename = self.musicData[index].filename
-                    location = urllib.parse.unquote(track["@Location"].replace("\\", "/").split("/")[-1])
+                    location = unquote(track["@Location"].replace("\\", "/").split("/")[-1])
                     if(location == filename):
                         changed = False
                         if(musicLine.keyButton.text() == ""):
@@ -81,7 +80,7 @@ class MainViewController():
     def openWikiPopup(self, index):
         try:
             html = wikiSearch(self.musicData[index].name)
-            self.Dialog = QtWidgets.QDialog()
+            self.Dialog = QDialog()
             self.ui = WikiDialog()
             self.ui.setupUi(self.Dialog, html, self.musicData[index].name)
             self.Dialog.show()
@@ -91,7 +90,7 @@ class MainViewController():
     
     def beatportButtonClicked(self):
         try:
-            self.loop = asyncio.get_event_loop()
+            self.loop = get_event_loop()
             self.loop.run_until_complete(self.collectBeatportData())
         except:
             pass
@@ -103,7 +102,7 @@ class MainViewController():
             item = self.musicData[index]
             tasks.append(self.loop.create_task(search(item.name, index, self.setBeatportData)))
         
-        await asyncio.wait(tasks)
+        await wait(tasks)
 
         self.updateBeatportDataToView()
     

@@ -1,22 +1,24 @@
-import re
-import mutagen
+from re import sub
+from mutagen import File
 from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, TRCK
+from mutagen.id3._specs import ID3TimeStamp
+
 class MusicData:
     beatportData = {}
     
     def __init__(self, root, filepath):
         self.fullpath = root + '\\' + filepath
         
-        self.prepath = re.sub(r'\\[^\\]*$', '', self.fullpath) + '\\'
+        self.prepath = sub(r'\\[^\\]*$', '', self.fullpath) + '\\'
         self.filename = self.fullpath.replace(self.prepath, '')
-        self.name = re.sub(r'\.[^\.]*$', '', self.filename)
+        self.name = sub(r'\.[^\.]*$', '', self.filename)
 
-        file = mutagen.File(self.fullpath)
+        file = File(self.fullpath)
         self.duration = file.info.length
         self.extension = self.filename.split('.')[-1].lower()
         
         self.title = self.extractKey(file, 'TIT2')[0]
-        self.artist = re.sub(r'\s*,\s*', '/', self.extractKey(file, 'TPE1')[0])
+        self.artist = sub(r'\s*,\s*', '/', self.extractKey(file, 'TPE1')[0])
         self.album = self.extractKey(file, 'TALB')[0]
         self.year = self.extractKey(file, 'TDRC')[0]
         self.genre = self.extractKey(file, 'TCON')[0]
@@ -28,7 +30,7 @@ class MusicData:
     
     def extractKey(self, file, key):
         if(key in file):
-            if(type(file.tags[key].text[0]) == mutagen.id3._specs.ID3TimeStamp):
+            if(type(file.tags[key].text[0]) == ID3TimeStamp):
                 return [str(file.tags[key].text[0])]
             else:
                 return file.tags[key].text

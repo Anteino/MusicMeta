@@ -1,8 +1,8 @@
-import urllib.parse
-import requests
+from urllib.parse import quote
+from requests import get
 
-import sys
-sys.path.append("../../MusicMeta")
+from sys import path
+path.append("../../MusicMeta")
 
 from utils.constants import *
 
@@ -13,9 +13,9 @@ def wikiSearch(data):
         return constructWikiPage(pageId)
 
 def wikiRequest(query, nested):
-    requestUrl = WIKI_API_URL + urllib.parse.quote(query)
+    requestUrl = WIKI_API_URL + quote(query)
 
-    resp = requests.get(requestUrl).json()
+    resp = get(requestUrl).json()
     if((nested) | ("suggestion" not in resp["query"]["searchinfo"])):
         return resp["query"]["search"][0]["pageid"]
     elif("suggestion" in resp["query"]["searchinfo"]):
@@ -28,7 +28,7 @@ def constructWikiPage(pageId):
 
     resp = ""
     while(resp == ""):
-        resp = requests.get(requestUrl).text
+        resp = get(requestUrl).text
 
     if(resp.find("tbody") == -1):
         return "<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>"
