@@ -7,10 +7,13 @@ path.append("../../MusicMeta")
 from utils.constants import *
 
 def wikiSearch(data):
-    pageId = wikiRequest(data, False)
+    try:
+        pageId = wikiRequest(data, False)
 
-    if(pageId != -1):
-        return constructWikiPage(pageId)
+        if(pageId != -1):
+            return constructWikiPage(pageId)
+    except Exception as e:
+        return "An exception occuring during handling of wikipedia request: " + str(e)
 
 def wikiRequest(query, nested):
     requestUrl = WIKI_API_URL + quote(query)
