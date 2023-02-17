@@ -2,7 +2,7 @@ from re import sub
 from mutagen import File
 from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, TRCK
 from mutagen.id3._specs import ID3TimeStamp
-import math
+from pathlib import Path
 
 class MusicData:
     beatportData = {}
@@ -39,6 +39,9 @@ class MusicData:
             return [""]
     
     def saveTags(self):
+        tmp = Path(self.fullpath)
+        if(not tmp.is_file()):
+            return
         try:
             tags = ID3(self.fullpath)
         except ID3NoHeaderError:
