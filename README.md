@@ -37,19 +37,15 @@ DISCOGS_SECRET = "your-discogs-secret"
 
 # Known bugs:
 
-- Currently, only MP3 files are supported. The program will even break WAV files when trying to edit their tags. So I excluded all extensions but MP3 for now.
 - Mutagen separates artists by using a forward slash /. This is problematic when bands like AC/DC are involved since they will be splitted into "two bands": AC and DC by the software.
 - The Beatport API has a tag called "mix_name". This can have values like "Original mix", "Pleasurekraft edit", "Extended mix", etc. The problem is that some songs have this mix_name in their title while others don't. But Beatport does not make a difference between this. So I had to choose between always including it in the title or never including it. I chose to always include it in the song title, but I might add a configurator to change this later.
-- Some songs will simply not be in the Beatport API. If anyone knows of a more complete or additional API, I might implement it later.
+- Some songs will simply not be in the Beatport database, Wikipedia or Discogs. If anyone knows of a more complete or additional API, I might implement it later.
 - Two identical wikipedia searches do not always yield identical search results. This non-deterministic behavior is out of my hands unfortunately.
+- Clicking the Wikipedia and Discogs buttons sometimes make the program hang and crash. Despite being encapsulated in try/execpt, the program blocks on the underlying code. I might add a timeout function for this later.
 
 # Possible future work
 
 - Perhaps I might add more tags later. As of now, the program contains enough tags for DJs.
-- The duration of the audio files is read into the program. I might add a function later that uses this information to refine the Beatport search. This might narrow the results down to just a single result that could be used to really automatically collect meta data whithout much human intervention.
-- I might take the current tags to further refine the Beatport search. However, this will cause problems if the tags have been set wrong before.
-- I might add a function to open the wiki page of a certain song (if there exists one) in a popup dialog. Most older or nostalgic songs are not on beatport and having a function to automatically open the wiki page might speed up the manual process significantly.
-- Might do the same for discogs since I noticed they're especially complete for older music.
 
 # Disclaimer
 
