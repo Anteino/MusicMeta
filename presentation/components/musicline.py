@@ -10,7 +10,7 @@ from utils.constants import *
 from utils.resourcepath import resourcePath
 
 class MusicLine:
-    def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags, openWikiPopup):
+    def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags, openWikiPopup, openDiscogsPopup):
         self.time = 0
 
         self.index = index
@@ -18,6 +18,7 @@ class MusicLine:
         self.beatportComboBoxChanged = beatportComboBoxChanged
         self.resetTags = resetTags
         self.openWikiPopUp = openWikiPopup
+        self.openDiscogsPopup = openDiscogsPopup
 
         self.frame = QFrame(super.scrollAreaWidgetContents)
         self.frame.setGeometry(QRect(0, self.index  * 80 + 10, 1711, 61))
@@ -57,6 +58,7 @@ class MusicLine:
         self.beatportComboBox.activated[int].connect(self.onComboBoxChanged)
 
         self.wikiButton = self.addWidget(QPushButton(self.frame), [1170, 30, 71, 20], OPEN_WIKI_PAGE, "wikiButton")
+        self.discogsButton = self.addWidget(QPushButton(self.frame), [1260, 30, 91, 20], OPEN_DISCOGS_PAGE, "discogsButton")
     
     def onComboBoxChanged(self, comboBoxIndex):
         self.beatportComboBoxChanged(self.index, comboBoxIndex)
@@ -64,10 +66,15 @@ class MusicLine:
     def wikiButtonClicked(self):
         self.openWikiPopUp(self.index)
     
+    def discogsButtonClicked(self):
+        self.openDiscogsPopup(self.index)
+    
     def addWidget(self, widgetType, geometry, text, name):
         widget = widgetType
         if("wiki" in name):
             widget.clicked.connect(self.wikiButtonClicked)
+        elif("discogs" in name):
+            widget.clicked.connect(self.discogsButtonClicked)
         elif("Button" in name):
             widget.setStyleSheet("QPushButton { text-align: left; }")
             lineEdit = self.frame.findChild(QLineEdit, name.replace("Button", "LineEdit"))

@@ -9,9 +9,10 @@ from utils.musicReader import musicReader as reader
 from utils.importRbCollection import importRbCollection as collect
 from model.beatportSearch import beatportSearch as search
 from model.wikiSearch import wikiSearch
+from model.discogsSearch import discogsSearch
 
 from presentation.mainview import MainView
-from presentation.components.wikidialog import WikiDialog
+from presentation.components.htmldialog import HtmlDialog
 
 class MainViewController():
     root = ""
@@ -20,7 +21,18 @@ class MainViewController():
 
     def __init__(self):
         self.app = QApplication(argv)
-        self.mainView = MainView(self.openFolderClicked, self.beatportButtonClicked, self.checkAllClicked, self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.saveButtonClicked, self.resetTags, self.openWikiPopup, self.rekordboxButtonClicked)
+        self.mainView = MainView(
+                                    self.openFolderClicked,
+                                    self.beatportButtonClicked,
+                                    self.checkAllClicked,
+                                    self.lineCheckBoxClicked,
+                                    self.beatportComboBoxChanged,
+                                    self.saveButtonClicked,
+                                    self.resetTags,
+                                    self.openWikiPopup,
+                                    self.openDiscogsPopup,
+                                    self.rekordboxButtonClicked
+                                )
     
     def show(self):
         self.mainView.selectAllCheckBox.setChecked(False)
@@ -81,11 +93,22 @@ class MainViewController():
         try:
             html = wikiSearch(self.musicData[index].name)
             self.Dialog = QDialog()
-            self.ui = WikiDialog()
-            self.ui.setupUi(self.Dialog, html, self.musicData[index].name)
+            self.ui = HtmlDialog()
+            self.ui.setupUi(self.Dialog, [1500, 100], [352, 800], html, self.musicData[index].name)
             self.Dialog.show()
         except Exception as e:
             print("An exception occuring during handling of wikipedia request: ", end="")
+            print(e)
+    
+    def openDiscogsPopup(self, index):
+        try:
+            html = discogsSearch(self.musicData[index].name)
+            self.Dialog = QDialog()
+            self.ui = HtmlDialog()
+            self.ui.setupUi(self.Dialog, [1500, 100], [352, 800], html, self.musicData[index].name)
+            self.Dialog.show()
+        except Exception as e:
+            print("An exception occuring during handling of discogs request: ", end="")
             print(e)
     
     def beatportButtonClicked(self):

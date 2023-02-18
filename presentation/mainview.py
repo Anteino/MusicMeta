@@ -11,7 +11,7 @@ from presentation.components.musicline import MusicLine
 class MainView(QMainWindow):
     musicLines = []
 
-    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags, openWikiPopup, rekordboxButtonClicked):
+    def __init__(self, openFolderClicked, beatportButtonClicked, checkAllClicked, lineCheckBoxClicked, beatportComboBoxChanged, saveButtonClicked, resetTags, openWikiPopup, openDiscogsPopup, rekordboxButtonClicked):
         super(MainView, self).__init__()
         self.openFolderClicked = openFolderClicked
         self.beatportButtonClicked = beatportButtonClicked
@@ -21,6 +21,7 @@ class MainView(QMainWindow):
         self.saveButtonClicked = saveButtonClicked
         self.resetTags = resetTags
         self.openWikiPopup = openWikiPopup
+        self.openDiscogsPopup = openDiscogsPopup
         self.rekordboxButtonClicked = rekordboxButtonClicked
         self.initUI()
         self.retranslateUi()
@@ -164,4 +165,13 @@ class MainView(QMainWindow):
                     self.musicLines[i].beatportComboBox.addItem(line)
     
     def addMusicDataFrame(self, data):
-        self.musicLines.append(MusicLine(self, data, len(self.musicLines), self.lineCheckBoxClicked, self.beatportComboBoxChanged, self.resetTags, self.openWikiPopup))
+        self.musicLines.append( MusicLine(
+                                            self,
+                                            data,
+                                            len(self.musicLines),
+                                            self.lineCheckBoxClicked,
+                                            self.beatportComboBoxChanged,
+                                            self.resetTags,
+                                            self.openWikiPopup,
+                                            self.openDiscogsPopup
+                                        ))
