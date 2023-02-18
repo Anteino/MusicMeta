@@ -4,10 +4,10 @@ from decouple import Config, RepositoryEnv
 
 from sys import path
 path.append("../../MusicMeta")
-
+from utils.resourcepath import resourcePath
 from utils.constants import *
 
-env=Config(RepositoryEnv(".env"))
+env=Config(RepositoryEnv(resourcePath(".env")))
 key = env.get("DISCOGS_KEY")
 secret = env.get("DISCOGS_SECRET")
 
