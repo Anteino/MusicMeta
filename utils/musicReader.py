@@ -1,7 +1,8 @@
-import os
-import sys
+from sys import path
+from os import listdir
+from os.path import isdir, join, sep
 
-sys.path.append('../MusicMeta')
+path.append('../MusicMeta')
 from utils.constants import ALLOWED_EXTENSIONS
 from classes.musicdata import MusicData
 
@@ -10,10 +11,10 @@ from classes.musicdata import MusicData
 
 
 def _get_dir_content(path, include_folders, recursive):
-    entries = os.listdir(path)
+    entries = listdir(path)
     for entry in entries:
-        entry_with_path = os.path.join(path, entry)
-        if os.path.isdir(entry_with_path):
+        entry_with_path = join(path, entry)
+        if isdir(entry_with_path):
             if include_folders:
                 yield entry_with_path
             if recursive:
@@ -24,17 +25,17 @@ def _get_dir_content(path, include_folders, recursive):
 
 
 def get_dir_content(path, include_folders=True, recursive=True, prepend_folder_name=True):
-    path_len = len(path) + len(os.path.sep)
+    path_len = len(path) + len(sep)
     for item in _get_dir_content(path, include_folders, recursive):
         yield item if prepend_folder_name else item[path_len:]
 
 
 def _get_dir_content_old(path, include_folders, recursive):
-    entries = os.listdir(path)
+    entries = listdir(path)
     ret = list()
     for entry in entries:
-        entry_with_path = os.path.join(path, entry)
-        if os.path.isdir(entry_with_path):
+        entry_with_path = join(path, entry)
+        if isdir(entry_with_path):
             if include_folders:
                 ret.append(entry_with_path)
             if recursive:
@@ -44,7 +45,7 @@ def _get_dir_content_old(path, include_folders, recursive):
     return ret
 
 def get_dir_content_old(path, include_folders=True, recursive=True, prepend_folder_name=True):
-    path_len = len(path) + len(os.path.sep)
+    path_len = len(path) + len(sep)
     return [item if prepend_folder_name else item[path_len:] for item in _get_dir_content_old(path, include_folders, recursive)]
 
 def musicReader(path):

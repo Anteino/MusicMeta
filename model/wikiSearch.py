@@ -1,21 +1,24 @@
-import urllib.parse
-import requests
+from urllib.parse import quote
+from requests import get
 
-import sys
-sys.path.append("../../MusicMeta")
+from sys import path
+path.append("../../MusicMeta")
 
 from utils.constants import *
 
 def wikiSearch(data):
-    pageId = wikiRequest(data, False)
+    try:
+        pageId = wikiRequest(data, False)
 
-    if(pageId != -1):
-        return constructWikiPage(pageId)
+        if(pageId != -1):
+            return constructWikiPage(pageId)
+    except Exception as e:
+        return "An exception occuring during handling of wikipedia request: " + str(e)
 
 def wikiRequest(query, nested):
-    requestUrl = WIKI_API_URL + urllib.parse.quote(query)
+    requestUrl = WIKI_API_URL + quote(query)
 
-    resp = requests.get(requestUrl).json()
+    resp = get(requestUrl).json()
     if((nested) | ("suggestion" not in resp["query"]["searchinfo"])):
         return resp["query"]["search"][0]["pageid"]
     elif("suggestion" in resp["query"]["searchinfo"]):
@@ -28,10 +31,10 @@ def constructWikiPage(pageId):
 
     resp = ""
     while(resp == ""):
-        resp = requests.get(requestUrl).text
+        resp = get(requestUrl).text
 
     if(resp.find("tbody") == -1):
-        return "<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>"
+        return NOT_FOUND_PAGE
 
     head = resp.split("<head>")[1].split("</head>")[0]
     stylesheets = []
@@ -49,7 +52,7 @@ def constructWikiPage(pageId):
         html += style + "\n"
     html += '</head>\n'
     html += '<body class="skin-vector skin-vector-search-vue vector-toc-pinned mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Ain_t_No_Other_Man rootpage-Ain_t_No_Other_Man skin-vector-2022 action-view">'
-    html += '<style type="text/css">li{display:inline}</style>'
+    # html += '<style type="text/css">li{display:inline}</style>'
     html += '<table class="infobox" style="border: 0; border-spacing: 0; margin: 0; padding: 0; float: left; font-size: 88\%; line-height: 1.5em; width: 22em;">\n<tbody>\n'
     html += resp.split("<tbody>")[1].split("</tbody>")[0].replace("=\"//upload", "=\"https://upload").replace('="/wiki', '="' + WIKI_BASE_URL + 'wiki')
     html += "</tbody>\n</table>"

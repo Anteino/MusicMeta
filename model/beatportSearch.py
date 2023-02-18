@@ -1,17 +1,17 @@
-import sys
-import aiohttp
-import urllib.parse
+from aiohttp import ClientSession
+from urllib.parse import quote
+from sys import path
 
-sys.path.append('../MusicMeta')
+path.append('../MusicMeta')
 from utils.constants import *
 
 async def beatportSearch(query, index, setBeatportData):
     finalQuery = query
     finalQuery = finalQuery.replace("(", " ")
     finalQuery = finalQuery.replace(")", " ")
-    finalQuery = urllib.parse.quote(finalQuery)
+    finalQuery = quote(finalQuery)
 
-    async with aiohttp.ClientSession() as session:
+    async with ClientSession() as session:
         requestUrl = BEATPORT_API_URL + finalQuery
         async with session.get(requestUrl) as response:
             resp = await response.json()

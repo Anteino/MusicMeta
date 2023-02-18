@@ -1,10 +1,14 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+
 block_cipher = None
+
 
 a = Analysis(
     ['MusicMeta.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets/icons/arrow_up.png', 'assets/icons/'), ('assets/icons/undo.png', 'assets/icons/')],
+    datas=[('assets/icons/arrow_up.png', 'assets/icons/'), ('assets/icons/undo.png', 'assets/icons/'), ('.env', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -31,7 +35,7 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
