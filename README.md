@@ -24,7 +24,16 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 
 # How to build
 
+For those that only want to use the program and not build it themselves, check out the windows-executable branch. If you don't want to run unverified software, I completely understand! You can simply build it yourself with the following command:
+
 <code>PyInstaller .\MusicMeta.spec</code>
+
+To use the Discogs web dialog in your build you must get your own authorizaton key and secret from their development program (https://www.discogs.com/settings/developers). After you get your credentials, create a .env file in the root directory as follows:
+
+<code>
+DISCOGS_KEY = "your-discogs-key"
+DISCOGS_SECRET = "your-discogs-secret"
+</code>
 
 # Known bugs:
 
@@ -39,7 +48,8 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 - Perhaps I might add more tags later. As of now, the program contains enough tags for DJs.
 - The duration of the audio files is read into the program. I might add a function later that uses this information to refine the Beatport search. This might narrow the results down to just a single result that could be used to really automatically collect meta data whithout much human intervention.
 - I might take the current tags to further refine the Beatport search. However, this will cause problems if the tags have been set wrong before.
-- I might add a function to open the discord page of a certain song (if there exists one) in a popup dialog in the same way as for Wikipedia.
+- I might add a function to open the wiki page of a certain song (if there exists one) in a popup dialog. Most older or nostalgic songs are not on beatport and having a function to automatically open the wiki page might speed up the manual process significantly.
+- Might do the same for discogs since I noticed they're especially complete for older music.
 
 # Disclaimer
 
