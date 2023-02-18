@@ -1,7 +1,8 @@
 # from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtCore import QTimer, QRect, Qt, QSize
+from PyQt5.QtCore import QRect, Qt, QSize
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtWidgets import QFrame, QCheckBox, QLabel, QLineEdit, QPushButton, QComboBox, QCommandLinkButton
+from time import time
 from sys import path
 
 path.append('../../MusicMeta')
@@ -10,7 +11,7 @@ from utils.resourcepath import resourcePath
 
 class MusicLine:
     def __init__(self, super, data, index, lineCheckBoxClicked, beatportComboBoxChanged, resetTags, openWikiPopup):
-        self.timer = QTimer()
+        self.time = 0
 
         self.index = index
         self.lineCheckBoxClicked = lineCheckBoxClicked
@@ -79,11 +80,10 @@ class MusicLine:
         return widget
 
     def checkDoubleClick(self, function):
-        if self.timer.isActive():
+        if time() - self.time < 0.25:
             function()
-            self.timer.stop()
         else:
-            self.timer.start(250)
+            self.time = time()
     
     def addButton(self, geometry, iconName, function):
         self.commandLinkButton = QCommandLinkButton(self.frame)

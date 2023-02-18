@@ -108,6 +108,11 @@ class MainViewController():
     
     def setBeatportData(self, index, data):
         self.musicData[index].beatportData = data
+
+        for track in data["tracks"]:
+            if (track["id"] == int(self.musicData[index].beatportId)):
+                key = str(track["key"]["camelot_number"]) + track["key"]["camelot_letter"]
+                self.mainView.musicLines[index].keyLineEdit.setText(key)
     
     def updateBeatportDataToView(self):
         self.mainView.updateBeatportData(self.musicData)

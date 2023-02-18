@@ -2,6 +2,7 @@ from re import sub
 from mutagen import File
 from mutagen.id3 import ID3NoHeaderError, ID3, TIT2, TPE1, TALB, TDRC, TCON, TPUB, TKEY, TBPM, TRCK
 from mutagen.id3._specs import ID3TimeStamp
+from pathlib import Path
 
 class MusicData:
     beatportData = {}
@@ -24,7 +25,7 @@ class MusicData:
         self.genre = self.extractKey(file, 'TCON')[0]
         self.publisher = self.extractKey(file, 'TPUB')[0]
         self.key = self.extractKey(file, 'TKEY')[0]
-        self.bpm = self.extractKey(file, 'TBPM')[0]
+        self.bpm = self.roundOffBpm(self.extractKey(file, 'TBPM')[0])
         self.beatportId = self.extractKey(file, 'TRCK')[0]
         self.oldBeatportId = self.beatportId
     
@@ -38,6 +39,9 @@ class MusicData:
             return [""]
     
     def saveTags(self):
+        tmp = Path(self.fullpath)
+        if(not tmp.is_file()):
+            return
         try:
             tags = ID3(self.fullpath)
         except ID3NoHeaderError:
@@ -55,3 +59,11 @@ class MusicData:
         tags["TRCK"] = TRCK(encoding=3, text=self.beatportId)
 
         tags.save(self.fullpath)
+    
+    def roundOffBpm(self, number):
+        if(number == ''): return ''
+        try:
+            bpm = float(number)
+            return str(round(bpm) if (abs(round(bpm) - bpm) <= 0.1) else bpm)
+        except ValueError:
+            return ''
