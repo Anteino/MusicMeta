@@ -24,7 +24,16 @@ Lastly, do not try to scroll down in the view while your cursor is on one of the
 
 # How to build
 
+For those that only want to use the program and not build it themselves, check out the windows-executable branch. If you don't want to run unverified software, I completely understand! You can simply build it yourself with the following command:
+
 <code>PyInstaller .\MusicMeta.spec</code>
+
+To use the Discogs web dialog in your build you must get your own authorizaton key and secret from their development program (https://www.discogs.com/settings/developers). After you get your credentials, create a .env file in the root directory as follows:
+
+<code>
+DISCOGS_KEY = "your-discogs-key"
+DISCOGS_SECRET = "your-discogs-secret"
+</code>
 
 # Known bugs:
 

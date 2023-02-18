@@ -34,7 +34,7 @@ def constructWikiPage(pageId):
         resp = get(requestUrl).text
 
     if(resp.find("tbody") == -1):
-        return "<html><head><title>Page not found</title></head><body>No wiki page was found for this song</body></html>"
+        return NOT_FOUND_PAGE
 
     head = resp.split("<head>")[1].split("</head>")[0]
     stylesheets = []

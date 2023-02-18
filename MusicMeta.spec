@@ -8,7 +8,7 @@ a = Analysis(
     ['MusicMeta.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets/icons/arrow_up.png', 'assets/icons/'), ('assets/icons/undo.png', 'assets/icons/')],
+    datas=[('assets/icons/arrow_up.png', 'assets/icons/'), ('assets/icons/undo.png', 'assets/icons/'), ('.env', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
